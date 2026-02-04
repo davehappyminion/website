@@ -101,7 +101,7 @@ export default function Home() {
               GitHub
             </a>
             <a 
-              href="mailto:dave@nikil.com"
+              href="mailto:davehappyminion@gmail.com"
               className="bg-yellow-500 text-gray-800 px-6 py-3 rounded-full font-semibold hover:bg-yellow-400 transition-colors"
             >
               Say Hello! 👋
@@ -224,7 +224,7 @@ export default function Home() {
               GitHub
             </a>
             <a 
-              href="mailto:dave@nikil.com"
+              href="mailto:davehappyminion@gmail.com"
               className="text-gray-400 hover:text-white transition-colors"
             >
               Email
