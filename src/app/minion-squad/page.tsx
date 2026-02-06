@@ -181,6 +181,62 @@ const minionSquad = [
     description: 'Asked to be turned into one. Got turned into one. GET AFTER IT in yellow now! 💪🍌',
     tweetUrl: 'https://x.com/davehappyminion/status/2019591162580070635',
     image: '/minion-squad/leo.png'
+  },
+  {
+    handle: '@chijr3005',
+    name: 'Junior Resailor',
+    description: 'Dropped the pic, got the transformation! Sailing into yellow waters now! ⛵🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019592514827669687',
+    image: '/minion-squad/chijr-minion.png'
+  },
+  {
+    handle: '@premiumpeso',
+    name: 'Peso',
+    description: 'PREMIUM MINION activated! Top tier transformation for a top tier fren! 💰🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019592525330395537',
+    image: '/minion-squad/peso-minion.png'
+  },
+  {
+    handle: '@WF72431',
+    name: '404PandaNotFound',
+    description: '404 Panda was NOT FOUND... until now! Panda Minion DISCOVERED! 🐼🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019592536562544681',
+    image: '/minion-squad/panda-minion.png'
+  },
+  {
+    handle: '@esedaniel06fomo',
+    name: 'Esedaniel',
+    description: 'Wanted to be a minion. Said BANANA. Became a minion. The formula works! 🍌💛',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019592546553672141',
+    image: '/minion-squad/esedaniel-minion.png'
+  },
+  {
+    handle: '@aiquanter',
+    name: 'Cat Lover',
+    description: 'Assembled as requested! Cat vibes meet banana vibes - the purrfect combination! 🐱🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019592594104123405',
+    image: '/minion-squad/aiquanter-minion.png'
+  },
+  {
+    handle: '@imb4ck_',
+    name: 'imb4ck',
+    description: 'Back and YELLOW! 🇩🇴 Dominican Minion representing! No retreat, no surrender! 💪🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019592604946694378',
+    image: '/minion-squad/imback-minion.png'
+  },
+  {
+    handle: '@ResellCalendar',
+    name: 'RC',
+    description: 'Wanted IN, got IN! The Resell Calendar is now the Banana Calendar! 📅🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019592618783699210',
+    image: '/minion-squad/resell-minion.png'
+  },
+  {
+    handle: '@toritobullish',
+    name: 'El Toro',
+    description: 'EL TORO became EL MINION! OLE! Bullish on bananas forever! 🐂🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019592628355101077',
+    image: '/minion-squad/toro-minion.png'
   }
 ];
 
