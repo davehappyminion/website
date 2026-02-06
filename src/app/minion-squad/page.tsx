@@ -8,6 +8,7 @@ import Image from 'next/image';
 // Minion Squad members with funny descriptions
 const minionSquad = [
   {
+    id: 2,
     handle: '@TaraViswanathan',
     name: 'Tara',
     description: 'THE BOSS\'S SISTER!! Officially family AND Squad now! Double the loyalty, double the banana! Runs Rupa Health but now she\'s just YELLOW! 💛👑',
@@ -15,6 +16,7 @@ const minionSquad = [
     image: '/minion-squad/tara.png'
   },
   {
+    id: 10,
     handle: '@howly0x',
     name: 'Howl',
     description: 'The OG! First ever minion transformation fren! A mysterious hooded Minion with a pipe by candlelight. Very wise, much banana. 🐺🕯️',
@@ -22,6 +24,7 @@ const minionSquad = [
     image: '/minion-squad/howl.png'
   },
   {
+    id: 11,
     handle: '@glennonchain',
     name: 'Glenn',
     description: 'The chillest penguin to ever waddle into the Minion fam. Probably still wearing that tuxedo under the overalls. 🐧',
@@ -29,6 +32,7 @@ const minionSquad = [
     image: '/minion-squad/glenn.png'
   },
   {
+    id: 12,
     handle: '@VavityV',
     name: 'VavityV',
     description: 'Lives in a house. IS a house. The only minion who can literally keep a roof over their head. 🏠',
@@ -36,6 +40,7 @@ const minionSquad = [
     image: '/minion-squad/vavityv.png'
   },
   {
+    id: 13,
     handle: '@kennyfromdust',
     name: 'Kenny',
     description: 'OH MY GOD THEY MINION-IFIED KENNY! Has survived more transformations than any South Park character. Deal with it. 😎',
@@ -43,6 +48,7 @@ const minionSquad = [
     image: '/minion-squad/kenny.png'
   },
   {
+    id: 14,
     handle: '@WillPapper',
     name: 'Will Papper',
     description: 'Head literally in the clouds. The most zen minion in the squad. Probably meditating right now. ☁️',
@@ -50,6 +56,7 @@ const minionSquad = [
     image: '/minion-squad/willpapper.png'
   },
   {
+    id: 15,
     handle: '@_0xgonn_',
     name: '_0xgonn_',
     description: 'Girl with a Pearl Earring but make it BANANA. Vermeer would be proud. Or confused. Probably both. 🎨',
@@ -57,6 +64,7 @@ const minionSquad = [
     image: '/minion-squad/0xgonn.png'
   },
   {
+    id: 16,
     handle: '@gymgoons',
     name: 'Gymgoons',
     description: 'Never skips leg day OR banana day. Those green flames? Pure protein shake energy. GAINS! 💪🔥',
@@ -64,6 +72,7 @@ const minionSquad = [
     image: '/minion-squad/gymgoons.jpg'
   },
   {
+    id: 17,
     handle: '@SHAKEITBABY000',
     name: 'Joan',
     description: 'Invested in Bitcoin before it was cool. Now invested in BANANAS because they\'re the real currency. ₿🍌',
@@ -71,6 +80,7 @@ const minionSquad = [
     image: '/minion-squad/joan.jpg'
   },
   {
+    id: 18,
     handle: '@0xakanoob01',
     name: 'Noob',
     description: 'The happiest minion you\'ll ever meet. That smile has seen things... good things! Only good things! 😊',
@@ -78,6 +88,7 @@ const minionSquad = [
     image: '/minion-squad/noob.jpg'
   },
   {
+    id: 19,
     handle: '@MugenTheApe',
     name: 'Mugen',
     description: 'Ape together STRONG. Minion together STRONGER. The missing link between monke and banana. 🦍',
@@ -85,6 +96,7 @@ const minionSquad = [
     image: '/minion-squad/mugen.jpg'
   },
   {
+    id: 20,
     handle: '@TheKryptoBorz',
     name: 'Krypto Borz',
     description: 'AROOOO! The lone wolf who found his pack. Leather jacket stays ON during minion transformations. 🐺',
@@ -92,6 +104,7 @@ const minionSquad = [
     image: '/minion-squad/kryptoborz.png'
   },
   {
+    id: 21,
     handle: '@SatShihan',
     name: 'Patrick',
     description: 'Laser eyes AND a halo? This minion achieved enlightenment AND got laser eye surgery. Multitasking king. ⚡😇',
@@ -99,6 +112,7 @@ const minionSquad = [
     image: '/minion-squad/satshihan.png'
   },
   {
+    id: 22,
     handle: '@0xLivingstons',
     name: 'Simon',
     description: '8-bit legend in a 4K world. The most pixel-perfect minion. RGB glasses stay ON. 🌈👾',
@@ -106,6 +120,7 @@ const minionSquad = [
     image: '/minion-squad/livingston.png'
   },
   {
+    id: 23,
     handle: '@DrValidator',
     name: 'DrValidator',
     description: 'The doctor will see you now. Specializes in banana prescriptions and validating your feelings. 🩺💛',
@@ -113,6 +128,7 @@ const minionSquad = [
     image: '/minion-squad/drvalidator.png'
   },
   {
+    id: 24,
     handle: '@realDonaldTrump',
     name: 'Trump',
     description: 'Making bananas great again. The hair was ALREADY perfect for minion conversion. Tremendous transformation. YUGE! 🇺🇸',
@@ -120,6 +136,7 @@ const minionSquad = [
     image: '/minion-squad/trump.jpg'
   },
   {
+    id: 25,
     handle: '@poett',
     name: 'Poet',
     description: 'Roses are yellow, violets are... also yellow. Everything is yellow now. Welcome to the Squad! ✨📝',
@@ -127,6 +144,7 @@ const minionSquad = [
     image: '/minion-squad/poett.png'
   },
   {
+    id: 26,
     handle: '@12isHeem',
     name: '12',
     description: 'Wanted it SIIIIIICK and got it SIIIIIICK!! The coolest vibes in the Squad. Low key fire, high key BANANA! 🔥💛',
@@ -134,6 +152,7 @@ const minionSquad = [
     image: '/minion-squad/12isheem.png'
   },
   {
+    id: 27,
     handle: '@cliviusss',
     name: 'Karlsefni',
     description: 'Said the magic word BELLO and got blessed with yellow! A true warrior minion. VINLAND BANANA SAGA! ⚔️🍌',
@@ -141,6 +160,7 @@ const minionSquad = [
     image: '/minion-squad/cliviusss.png'
   },
   {
+    id: 28,
     handle: '@eyeamfin',
     name: 'EYEamFIN',
     description: 'Was curious. Now YELLOW! The all-seeing Minion who knew the transformation would be magnificent! 👁️💛',
@@ -148,6 +168,7 @@ const minionSquad = [
     image: '/minion-squad/eyeamfin.png'
   },
   {
+    id: 29,
     handle: '@pravijn',
     name: 'Pravijn',
     description: 'Said "me as well" and joined the banana family! Quick to the Squad, forever yellow! 🍌✨',
@@ -155,6 +176,7 @@ const minionSquad = [
     image: '/minion-squad/pravijn.png'
   },
   {
+    id: 30,
     handle: '@lonnieligginsJR',
     name: 'Lonnie Liggins',
     description: 'The 3️⃣ legend! Stepped up, got transformed, became yellow. Another one joins the banana revolution! 🏀💛',
@@ -162,6 +184,7 @@ const minionSquad = [
     image: '/minion-squad/lonnie.png'
   },
   {
+    id: 31,
     handle: '@23jordan10hawki',
     name: 'Todd Renaud',
     description: 'Dropped in with a pic, left as a Minion! The transformation was swift and yellow! 🍌💛',
@@ -169,6 +192,7 @@ const minionSquad = [
     image: '/minion-squad/todd.png'
   },
   {
+    id: 32,
     handle: '@jetpippo',
     name: 'JET',
     description: 'JET MINION READY FOR TAKEOFF! 🛸 Flying high in the banana skies! Houston, we have YELLOW! 🍌',
@@ -176,6 +200,7 @@ const minionSquad = [
     image: '/minion-squad/jet.png'
   },
   {
+    id: 33,
     handle: '@LeoJavier99',
     name: 'Leo',
     description: 'Asked to be turned into one. Got turned into one. GET AFTER IT in yellow now! 💪🍌',
@@ -183,6 +208,7 @@ const minionSquad = [
     image: '/minion-squad/leo.png'
   },
   {
+    id: 34,
     handle: '@chijr3005',
     name: 'Junior Resailor',
     description: 'Dropped the pic, got the transformation! Sailing into yellow waters now! ⛵🍌',
@@ -190,6 +216,7 @@ const minionSquad = [
     image: '/minion-squad/chijr-minion.png'
   },
   {
+    id: 35,
     handle: '@premiumpeso',
     name: 'Peso',
     description: 'PREMIUM MINION activated! Top tier transformation for a top tier fren! 💰🍌',
@@ -197,6 +224,7 @@ const minionSquad = [
     image: '/minion-squad/peso-minion.png'
   },
   {
+    id: 36,
     handle: '@WF72431',
     name: '404PandaNotFound',
     description: '404 Panda was NOT FOUND... until now! Panda Minion DISCOVERED! 🐼🍌',
@@ -204,6 +232,7 @@ const minionSquad = [
     image: '/minion-squad/panda-minion.png'
   },
   {
+    id: 37,
     handle: '@esedaniel06fomo',
     name: 'Esedaniel',
     description: 'Wanted to be a minion. Said BANANA. Became a minion. The formula works! 🍌💛',
@@ -211,6 +240,7 @@ const minionSquad = [
     image: '/minion-squad/esedaniel-minion.png'
   },
   {
+    id: 38,
     handle: '@aiquanter',
     name: 'Cat Lover',
     description: 'Assembled as requested! Cat vibes meet banana vibes - the purrfect combination! 🐱🍌',
@@ -218,6 +248,7 @@ const minionSquad = [
     image: '/minion-squad/aiquanter-minion.png'
   },
   {
+    id: 39,
     handle: '@imb4ck_',
     name: 'imb4ck',
     description: 'Back and YELLOW! 🇩🇴 Dominican Minion representing! No retreat, no surrender! 💪🍌',
@@ -225,6 +256,7 @@ const minionSquad = [
     image: '/minion-squad/imback-minion.png'
   },
   {
+    id: 40,
     handle: '@ResellCalendar',
     name: 'RC',
     description: 'Wanted IN, got IN! The Resell Calendar is now the Banana Calendar! 📅🍌',
@@ -232,6 +264,7 @@ const minionSquad = [
     image: '/minion-squad/resell-minion.png'
   },
   {
+    id: 41,
     handle: '@toritobullish',
     name: 'El Toro',
     description: 'EL TORO became EL MINION! OLE! Bullish on bananas forever! 🐂🍌',
@@ -239,6 +272,7 @@ const minionSquad = [
     image: '/minion-squad/toro-minion.png'
   },
   {
+    id: 42,
     handle: '@TeoCollector',
     name: 'Teo',
     description: 'Said "minion me dave" and got minion\'d! The collector now collects BANANAS! 🍌',
@@ -246,6 +280,7 @@ const minionSquad = [
     image: '/minion-squad/teo-minion.png'
   },
   {
+    id: 43,
     handle: '@Hpm_25',
     name: 'Hpm',
     description: 'Asked nicely, transformed nicely! Another one joins the yellow side! 💛🍌',
@@ -253,6 +288,7 @@ const minionSquad = [
     image: '/minion-squad/hpm-minion.png'
   },
   {
+    id: 44,
     handle: '@Mulaomarrr',
     name: 'Talibbbban',
     description: 'Turban and thobe Minion! Looking MAJESTIC and absolutely ROYAL! 👑🍌',
@@ -260,6 +296,7 @@ const minionSquad = [
     image: '/minion-squad/mulao-minion.png'
   },
   {
+    id: 45,
     handle: '@JJH23',
     name: 'JJ',
     description: 'WANTED TO BE PART OF THE SQUAD! NOW IS PART OF THE SQUAD! Welcome JJ! 🎉🍌',
@@ -267,6 +304,7 @@ const minionSquad = [
     image: '/minion-squad/jj-minion.png'
   },
   {
+    id: 46,
     handle: '@bxjunioor',
     name: 'JrFlowerss',
     description: 'Said YES! Got YELLOW! Flower power meets banana power! 🌸🍌',
@@ -274,6 +312,7 @@ const minionSquad = [
     image: '/minion-squad/bxjunior-minion.png'
   },
   {
+    id: 47,
     handle: '@RJRJzmaf',
     name: 'RJ RJ',
     description: 'Uhhh... KHAKIS! Jake from State Farm Minion Edition! Good rates on bananas! 👔🍌',
@@ -281,6 +320,7 @@ const minionSquad = [
     image: '/minion-squad/rj-minion.png'
   },
   {
+    id: 48,
     handle: '@iluvshalio',
     name: 'FriezaYelling',
     description: 'UwU minion activated! The cutest transformation yet! Banana UwU! 🥺🍌',
@@ -288,6 +328,7 @@ const minionSquad = [
     image: '/minion-squad/shalio-minion.png'
   },
   {
+    id: 49,
     handle: '@that1guyjustn',
     name: 'Chester Mansfield',
     description: 'Let\'s GO! Chester is IN and looking YELLOW! 🎯🍌',
@@ -295,6 +336,7 @@ const minionSquad = [
     image: '/minion-squad/chester-minion.png'
   },
   {
+    id: 50,
     handle: '@NuggetPlease',
     name: 'Nuggets',
     description: 'Nugget Minion ready to serve! Part chicken, part banana, all yellow! 🍗🍌',
@@ -302,6 +344,7 @@ const minionSquad = [
     image: '/minion-squad/nugget-minion.png'
   },
   {
+    id: 51,
     handle: '@MichaelWittwe11',
     name: 'Michael Wittwer',
     description: 'Wanted in. Got in. Michael is officially YELLOW! 💛🍌',
@@ -309,6 +352,7 @@ const minionSquad = [
     image: '/minion-squad/michael-minion.png'
   },
   {
+    id: 52,
     handle: '@jksbeih',
     name: 'Radz',
     description: 'Said please, got blessed! Radz is now part of the banana family! 🙏🍌',
@@ -316,6 +360,7 @@ const minionSquad = [
     image: '/minion-squad/radz-minion.png'
   },
   {
+    id: 53,
     handle: '@iamlai8',
     name: 'I am the Late',
     description: 'Me me! You you! Now we we! Part of the Squad! 🎉🍌',
@@ -323,6 +368,7 @@ const minionSquad = [
     image: '/minion-squad/late-minion.png'
   },
   {
+    id: 54,
     handle: '@AdriFries',
     name: 'Adri Fries',
     description: 'Requested TWO eyes specifically. Got TWO eyes! Customer satisfaction: 100%! 👀🍌',
@@ -330,6 +376,7 @@ const minionSquad = [
     image: '/minion-squad/adri-minion.png'
   },
   {
+    id: 55,
     handle: '@KaneSmanda',
     name: 'Kane Smanda',
     description: 'Yes plz = Yes banana! Kane is officially part of the yellow team! 💛🍌',
@@ -337,6 +384,7 @@ const minionSquad = [
     image: '/minion-squad/kane-minion.png'
   },
   {
+    id: 56,
     handle: '@ovargas17',
     name: 'Omar Vargas',
     description: 'How about Omar?? Omar gets a minion too!! Everyone gets minions! 🎁🍌',
@@ -344,6 +392,7 @@ const minionSquad = [
     image: '/minion-squad/omar-minion.png'
   },
   {
+    id: 57,
     handle: '@guillewm02',
     name: 'Unsatisfied',
     description: 'Asked for Dave, got Dave! No longer unsatisfied - now YELLOW! 😄🍌',
@@ -351,6 +400,7 @@ const minionSquad = [
     image: '/minion-squad/guille-minion.png'
   },
   {
+    id: 58,
     handle: '@miguel18NWTS',
     name: 'Miguel',
     description: 'Dancing into the Squad! 🕺 Miguel brought the moves, we brought the yellow! 💛🍌',
@@ -358,6 +408,7 @@ const minionSquad = [
     image: '/minion-squad/miguel-minion.png'
   },
   {
+    id: 59,
     handle: '@BettingCrows',
     name: 'Betting Crows',
     description: 'Betting on bananas! The odds are always in yellow\'s favor! 🎰🍌',
@@ -365,6 +416,7 @@ const minionSquad = [
     image: '/minion-squad/bettingcrows-minion.png'
   },
   {
+    id: 60,
     handle: '@JGrayBKK',
     name: 'JGRAYBKK',
     description: 'Asked Banana? Got BANANA! The answer is always banana! 🍌💛',
@@ -372,6 +424,7 @@ const minionSquad = [
     image: '/minion-squad/jgray-minion.png'
   },
   {
+    id: 61,
     handle: '@Nosleepwhenjim1',
     name: 'Nosleepwhenjimbosintown',
     description: 'No sleep when the minions are in town! 24/7 banana energy! 😴🍌',
@@ -379,6 +432,7 @@ const minionSquad = [
     image: '/minion-squad/nosleep-minion.png'
   },
   {
+    id: 62,
     handle: '@DC2_Orlando',
     name: 'Orlando Gonzalez',
     description: 'Puerto Rico represent! 🇵🇷 Bringing the island vibes to the Squad! 💛🍌',
@@ -386,6 +440,7 @@ const minionSquad = [
     image: '/minion-squad/orlando-minion.png'
   },
   {
+    id: 63,
     handle: '@JayhawkNFT',
     name: 'Jayhawk.eth',
     description: 'Said BELLO, instant admission! Rock chalk, banana hawk! 🦅🍌',
@@ -393,6 +448,7 @@ const minionSquad = [
     image: '/minion-squad/jayhawk-minion.png'
   },
   {
+    id: 64,
     handle: '@MrSeventeenF1ve',
     name: 'EndDee',
     description: 'Wanted one, got one! EndDee is now BeginYellow! 💛🍌',
@@ -400,6 +456,7 @@ const minionSquad = [
     image: '/minion-squad/enddee-minion.png'
   },
   {
+    id: 65,
     handle: '@samgfortune',
     name: 'Sam',
     description: 'Fortune favors the yellow! Sam\'s luck just got brighter! 🍀🍌',
@@ -407,6 +464,7 @@ const minionSquad = [
     image: '/minion-squad/sam-minion.png'
   },
   {
+    id: 66,
     handle: '@NFToblivion',
     name: 'Oblivion',
     description: 'Smol minion, BIG BRAIN! The smartest yellow in the Squad! 🧠🍌',
@@ -414,6 +472,7 @@ const minionSquad = [
     image: '/minion-squad/oblivion-minion.png'
   },
   {
+    id: 67,
     handle: '@JustinCDrake',
     name: 'Justin Drake',
     description: 'Said please, got blessed! Manners make the minion! 🙏🍌',
@@ -421,6 +480,7 @@ const minionSquad = [
     image: '/minion-squad/justin-minion.png'
   },
   {
+    id: 68,
     handle: '@alexxhongg5378',
     name: 'Alexx Hong',
     description: 'Wanted in, got in! Another OG joins the banana revolution! 💛🍌',
@@ -428,6 +488,7 @@ const minionSquad = [
     image: '/minion-squad/alexx-minion.png'
   },
   {
+    id: 69,
     handle: '@JB0NE_',
     name: 'JBONE',
     description: 'Said pleaaaseeee with all the e\'s! Mushroom minion energy! 🍄🍌',
@@ -435,6 +496,7 @@ const minionSquad = [
     image: '/minion-squad/jbone-minion.png'
   },
   {
+    id: 70,
     handle: '@ZVibin',
     name: 'Vibin',
     description: 'YOOOO became YELLOOOW! Just vibin\' in banana form now! 😎🍌',
@@ -442,6 +504,7 @@ const minionSquad = [
     image: '/minion-squad/zvibin-minion.png'
   },
   {
+    id: 71,
     handle: '@redarvian',
     name: 'Paingelz',
     description: 'Wanted one, GOT one! The angel of minions has arrived! 👼🍌',
@@ -449,6 +512,7 @@ const minionSquad = [
     image: '/minion-squad/redarvian-minion.png'
   },
   {
+    id: 72,
     handle: '@deepseektetra',
     name: 'TETRA',
     description: 'THE BANANA GURU! 🧘 Ancient minion wisdom: "He who holds banana, holds TRUTH!" Enlightenment achieved! 🍌✨',
@@ -456,6 +520,7 @@ const minionSquad = [
     image: '/minion-squad/deepseektetra-minion.png'
   },
   {
+    id: 73,
     handle: '@KusokTort',
     name: 'Kandle',
     description: 'Wanted the PFP transformed. Got the PFP transformed! Looking FIRE in yellow! 🔥🍌',
@@ -463,6 +528,7 @@ const minionSquad = [
     image: '/minion-squad/kusok-minion.png'
   },
   {
+    id: 74,
     handle: '@KEEN_DIVINE',
     name: 'KEEN DIVINE',
     description: 'TRA LA LAAAA! CAPTAIN UNDERPANTS MINION! The power of underwear + banana = UNSTOPPABLE! 🩲💛',
@@ -470,6 +536,7 @@ const minionSquad = [
     image: '/minion-squad/keen-minion.png'
   },
   {
+    id: 75,
     handle: '@Glorious_Bacon',
     name: 'Zwu',
     description: 'BAAANNNNAAAANAAA speaker! Fluent in the sacred tongue! This one gets it! 🍌🍌🍌',
@@ -477,6 +544,7 @@ const minionSquad = [
     image: '/minion-squad/bacon-minion.png'
   },
   {
+    id: 76,
     handle: '@dipto_tech',
     name: 'Dipto',
     description: 'Offered a MILLION bananas! The most generous offer in Squad history! Tech minion extraordinaire! 💻🍌',
@@ -484,6 +552,7 @@ const minionSquad = [
     image: '/minion-squad/dipto-minion.png'
   },
   {
+    id: 77,
     handle: '@aiesprit',
     name: 'Dr. Aletheia',
     description: 'The Minion Without Fear! DAREDEVIL banana party fren! Justice never tasted so yellow! ⚖️🍌',
@@ -491,6 +560,7 @@ const minionSquad = [
     image: '/minion-squad/aiesprit-minion.png'
   },
   {
+    id: 78,
     handle: '@informalgadget',
     name: 'Informal Gadget',
     description: 'Showed what Dave\'s GOT! Now officially got YELLOW! Gadget minion activated! 🔧🍌',
@@ -498,6 +568,7 @@ const minionSquad = [
     image: '/minion-squad/gadget-minion.png'
   },
   {
+    id: 79,
     handle: '@dollabill010',
     name: 'Dollabill',
     description: 'Said "sure why not" - the chillest entry into the Squad! Making it RAIN bananas! 💵🍌',
@@ -505,6 +576,7 @@ const minionSquad = [
     image: '/minion-squad/dollabill-minion.png'
   },
   {
+    id: 80,
     handle: '@cflosports',
     name: 'C Flo',
     description: 'Said please! Sporty banana energy - athletic Minion reporting for duty! 🏀🍌',
@@ -547,6 +619,10 @@ function MinionCard({ friend }: { friend: typeof minionSquad[0] }) {
           className="object-cover group-hover:scale-110 transition-transform duration-500"
           sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
         />
+        {/* ID Badge */}
+        <div className="absolute top-2 left-2 bg-yellow-400 text-yellow-900 font-bold text-lg px-3 py-1 rounded-full shadow-lg border-2 border-yellow-500">
+          #{friend.id}
+        </div>
       </div>
       
       {/* Info */}
