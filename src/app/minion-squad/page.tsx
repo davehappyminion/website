@@ -160,6 +160,27 @@ const minionSquad = [
     description: 'The 3️⃣ legend! Stepped up, got transformed, became yellow. Another one joins the banana revolution! 🏀💛',
     tweetUrl: 'https://x.com/davehappyminion/status/2019590091983766008',
     image: '/minion-squad/lonnie.png'
+  },
+  {
+    handle: '@23jordan10hawki',
+    name: 'Todd Renaud',
+    description: 'Dropped in with a pic, left as a Minion! The transformation was swift and yellow! 🍌💛',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019591138148270410',
+    image: '/minion-squad/todd.png'
+  },
+  {
+    handle: '@jetpippo',
+    name: 'JET',
+    description: 'JET MINION READY FOR TAKEOFF! 🛸 Flying high in the banana skies! Houston, we have YELLOW! 🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019591150496251981',
+    image: '/minion-squad/jet.png'
+  },
+  {
+    handle: '@LeoJavier99',
+    name: 'Leo',
+    description: 'Asked to be turned into one. Got turned into one. GET AFTER IT in yellow now! 💪🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019591162580070635',
+    image: '/minion-squad/leo.png'
   }
 ];
 
