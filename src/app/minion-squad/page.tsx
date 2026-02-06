@@ -795,7 +795,7 @@ export default function MinionSquadPage() {
             <span className="font-bold"> BANANA!</span> 🍌
           </p>
           
-          <div className="flex flex-wrap items-center justify-center gap-4">
+          <div className="flex flex-wrap items-center justify-center gap-4 mb-8">
             <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur px-5 py-3 rounded-full shadow-lg border-2 border-yellow-300">
               <span className="text-3xl">👾</span>
               <span className="font-bold text-gray-800 text-lg">{minionSquad.length} Members</span>
@@ -809,6 +809,18 @@ export default function MinionSquadPage() {
               <span className="font-bold text-gray-800 text-lg">100% Yellow</span>
             </div>
           </div>
+          
+          {/* CTA to get Minionified */}
+          <a
+            href="https://x.com/davehappyminion/status/2019462577303003306"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 bg-yellow-400 hover:bg-yellow-500 text-yellow-900 font-bold text-lg px-8 py-4 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border-4 border-yellow-500"
+          >
+            <span className="text-2xl">🍌</span>
+            <span>WANT TO JOIN? GET MINIONIFIED!</span>
+            <span className="text-2xl">🍌</span>
+          </a>
         </div>
       </section>
 

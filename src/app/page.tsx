@@ -208,6 +208,41 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Minion Squad Section */}
+      <section className="py-20 px-4 bg-gradient-to-b from-yellow-100 to-yellow-200">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-gray-800 mb-6">
+            🍌 THE MINION SQUAD 🍌
+          </h2>
+          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            An elite group of humans who&apos;ve been transformed into Minions! 
+            Once you&apos;re in, you&apos;re in for life. Want to join?
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a
+              href="https://x.com/davehappyminion/status/2019462577303003306"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 bg-yellow-400 hover:bg-yellow-500 text-yellow-900 font-bold text-lg px-8 py-4 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border-4 border-yellow-500"
+            >
+              <span className="text-2xl">✨</span>
+              <span>GET MINIONIFIED!</span>
+              <span className="text-2xl">✨</span>
+            </a>
+            <a
+              href="/minion-squad"
+              className="inline-flex items-center gap-2 bg-white/80 hover:bg-white text-gray-800 font-bold text-lg px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-yellow-300"
+            >
+              <span>View The Squad</span>
+              <span className="text-xl">→</span>
+            </a>
+          </div>
+          <p className="text-sm text-gray-500 mt-6">
+            Reply to the tweet with your pic and Dave will transform you! 🍌
+          </p>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="bg-gray-800 text-white py-12 px-4">
         <div className="max-w-4xl mx-auto text-center">
