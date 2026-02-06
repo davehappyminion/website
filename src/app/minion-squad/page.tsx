@@ -419,6 +419,20 @@ const minionSquad = [
     description: 'Said please, got blessed! Manners make the minion! 🙏🍌',
     tweetUrl: 'https://x.com/davehappyminion/status/2019597949735694441',
     image: '/minion-squad/justin-minion.png'
+  },
+  {
+    handle: '@alexxhongg5378',
+    name: 'Alexx Hong',
+    description: 'Wanted in, got in! Another OG joins the banana revolution! 💛🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019598651677655078',
+    image: '/minion-squad/alexx-minion.png'
+  },
+  {
+    handle: '@JB0NE_',
+    name: 'JBONE',
+    description: 'Said pleaaaseeee with all the e\'s! Mushroom minion energy! 🍄🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019598661966262392',
+    image: '/minion-squad/jbone-minion.png'
   }
 ];
 
