@@ -702,12 +702,15 @@ function MinionCard({ friend }: { friend: typeof minionSquad[0] }) {
   const isPlaceholder = !friend.tweetUrl || friend.handle === '@???';
   const CardWrapper = isPlaceholder ? 'div' : 'a';
   const cardProps = isPlaceholder ? {} : { href: friend.tweetUrl, target: "_blank", rel: "noopener noreferrer" };
+  // Create anchor ID from handle (remove @ and lowercase) or use minion-{id}
+  const anchorId = friend.handle === '@???' ? `minion-${friend.id}` : friend.handle.replace('@', '').toLowerCase();
   
   return (
-    <CardWrapper 
-      {...cardProps}
-      className={`group bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] border-2 block ${isPlaceholder ? 'border-red-400 bg-gray-900/90' : 'border-yellow-200 hover:border-yellow-400'}`}
-    >
+    <div id={anchorId} className="scroll-mt-24">
+      <CardWrapper 
+        {...cardProps}
+        className={`group bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] border-2 block ${isPlaceholder ? 'border-red-400 bg-gray-900/90' : 'border-yellow-200 hover:border-yellow-400'}`}
+      >
       {/* Image container */}
       <div className="relative aspect-square bg-gradient-to-br from-yellow-100 to-yellow-200 overflow-hidden">
         <Image
@@ -741,6 +744,7 @@ function MinionCard({ friend }: { friend: typeof minionSquad[0] }) {
         </p>
       </div>
     </CardWrapper>
+    </div>
   );
 }
 
