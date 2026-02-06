@@ -598,6 +598,14 @@ const minionSquad = [
     description: 'Said BELLOOO! Fitness Minion reporting for duty - gains AND bananas! 💪🍌',
     tweetUrl: 'https://x.com/davehappyminion/status/2019606812597842219',
     image: '/minion-squad/mikefit-minion.png'
+  },
+  {
+    id: 83,
+    handle: '@ismailouassaddi',
+    name: 'Ismail',
+    description: 'Said LET ME IN! Door opened wide! Welcome to the banana family! 🚪🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019607921206915419',
+    image: '/minion-squad/ismail-minion.png'
   }
 ];
 
