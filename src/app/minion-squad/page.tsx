@@ -611,7 +611,7 @@ const minionSquad = [
     id: 9,
     handle: '@???',
     name: '???',
-    description: '🔒 RESERVED - Secret Minion #9 coming soon... 🍌',
+    description: '🔒 TOP SECRET - Classified Minion #9... 🍌',
     tweetUrl: '',
     image: '/minion-squad/placeholder.png'
   },
@@ -619,7 +619,7 @@ const minionSquad = [
     id: 8,
     handle: '@???',
     name: '???',
-    description: '🔒 RESERVED - Secret Minion #8 coming soon... 🍌',
+    description: '🔒 TOP SECRET - Classified Minion #8... 🍌',
     tweetUrl: '',
     image: '/minion-squad/placeholder.png'
   },
@@ -627,7 +627,7 @@ const minionSquad = [
     id: 7,
     handle: '@???',
     name: '???',
-    description: '🔒 RESERVED - Secret Minion #7 coming soon... 🍌',
+    description: '🔒 TOP SECRET - Classified Minion #7... 🍌',
     tweetUrl: '',
     image: '/minion-squad/placeholder.png'
   },
@@ -635,7 +635,7 @@ const minionSquad = [
     id: 6,
     handle: '@???',
     name: '???',
-    description: '🔒 RESERVED - Secret Minion #6 coming soon... 🍌',
+    description: '🔒 TOP SECRET - Classified Minion #6... 🍌',
     tweetUrl: '',
     image: '/minion-squad/placeholder.png'
   },
@@ -643,7 +643,7 @@ const minionSquad = [
     id: 5,
     handle: '@???',
     name: '???',
-    description: '🔒 RESERVED - Secret Minion #5 coming soon... 🍌',
+    description: '🔒 TOP SECRET - Classified Minion #5... 🍌',
     tweetUrl: '',
     image: '/minion-squad/placeholder.png'
   },
@@ -651,7 +651,7 @@ const minionSquad = [
     id: 4,
     handle: '@???',
     name: '???',
-    description: '🔒 RESERVED - Secret Minion #4 coming soon... 🍌',
+    description: '🔒 TOP SECRET - Classified Minion #4... 🍌',
     tweetUrl: '',
     image: '/minion-squad/placeholder.png'
   },
@@ -659,7 +659,7 @@ const minionSquad = [
     id: 3,
     handle: '@???',
     name: '???',
-    description: '🔒 RESERVED - Secret Minion #3 coming soon... 🍌',
+    description: '🔒 TOP SECRET - Classified Minion #3... 🍌',
     tweetUrl: '',
     image: '/minion-squad/placeholder.png'
   },
@@ -675,7 +675,7 @@ const minionSquad = [
     id: 1,
     handle: '@???',
     name: '???',
-    description: '🔒 RESERVED - Who will be #1? Only time will tell... 🍌',
+    description: '🔒 TOP SECRET - Classified Minion #1... 🍌',
     tweetUrl: '',
     image: '/minion-squad/placeholder.png'
   }
@@ -706,7 +706,7 @@ function MinionCard({ friend }: { friend: typeof minionSquad[0] }) {
   return (
     <CardWrapper 
       {...cardProps}
-      className={`group bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] border-2 block ${isPlaceholder ? 'border-gray-300 opacity-60' : 'border-yellow-200 hover:border-yellow-400'}`}
+      className={`group bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] border-2 block ${isPlaceholder ? 'border-red-400 bg-gray-900/90' : 'border-yellow-200 hover:border-yellow-400'}`}
     >
       {/* Image container */}
       <div className="relative aspect-square bg-gradient-to-br from-yellow-100 to-yellow-200 overflow-hidden">
@@ -718,8 +718,8 @@ function MinionCard({ friend }: { friend: typeof minionSquad[0] }) {
           sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
         />
         {/* ID Badge */}
-        <div className="absolute top-2 left-2 bg-yellow-400 text-yellow-900 font-bold text-lg px-3 py-1 rounded-full shadow-lg border-2 border-yellow-500">
-          #{friend.id}
+        <div className={`absolute top-2 left-2 font-bold text-lg px-3 py-1 rounded-full shadow-lg border-2 ${isPlaceholder ? 'bg-red-600 text-white border-red-700' : 'bg-yellow-400 text-yellow-900 border-yellow-500'}`}>
+          {isPlaceholder ? '🔒 TOP SECRET' : `#${friend.id}`}
         </div>
       </div>
       

@@ -1,6 +1,37 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+
+// Squad member images (non-placeholder only)
+const squadMembers = [
+  '/minion-squad/tara.png',
+  '/minion-squad/howl.png',
+  '/minion-squad/trump.jpg',
+  '/minion-squad/0xgonn.png',
+  '/minion-squad/glenn.png',
+  '/minion-squad/gymgoons.jpg',
+  '/minion-squad/joan.jpg',
+  '/minion-squad/noob.jpg',
+  '/minion-squad/mugen.jpg',
+  '/minion-squad/kenny.png',
+  '/minion-squad/livingston.png',
+  '/minion-squad/vavityv.png',
+  '/minion-squad/willpapper.png',
+  '/minion-squad/kryptoborz.png',
+  '/minion-squad/satshihan.png',
+  '/minion-squad/drvalidator.png',
+  '/minion-squad/poett.png',
+  '/minion-squad/12isheem.png',
+  '/minion-squad/cliviusss.png',
+  '/minion-squad/eyeamfin.png',
+  '/minion-squad/pravijn.png',
+  '/minion-squad/lonnie.png',
+  '/minion-squad/todd.png',
+  '/minion-squad/jet.png',
+  '/minion-squad/leo.png',
+];
 
 // Floating banana component
 function FloatingBanana({ delay, left }: { delay: number; left: string }) {
@@ -148,6 +179,59 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Minion Squad Section */}
+      <section className="py-20 px-4 bg-gradient-to-b from-yellow-100 to-yellow-200">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-gray-800 mb-4">
+            🍌 THE MINION SQUAD 🍌
+          </h2>
+          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            An elite group of humans transformed into Minions! Want to join?
+          </p>
+          
+          {/* Profile pics grid */}
+          <div className="flex flex-wrap justify-center gap-2 mb-8">
+            {squadMembers.map((img, i) => (
+              <div key={i} className="relative w-16 h-16 rounded-full overflow-hidden border-3 border-yellow-400 shadow-lg hover:scale-110 transition-transform">
+                <Image
+                  src={img}
+                  alt="Squad member"
+                  fill
+                  className="object-cover"
+                  sizes="64px"
+                />
+              </div>
+            ))}
+            <Link 
+              href="/minion-squad"
+              className="w-16 h-16 rounded-full bg-yellow-400 border-3 border-yellow-500 shadow-lg flex items-center justify-center text-2xl hover:scale-110 transition-transform"
+            >
+              +50
+            </Link>
+          </div>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a
+              href="https://x.com/davehappyminion/status/2019462577303003306"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 bg-yellow-400 hover:bg-yellow-500 text-yellow-900 font-bold text-lg px-8 py-4 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border-4 border-yellow-500"
+            >
+              <span className="text-2xl">✨</span>
+              <span>GET MINIONIFIED!</span>
+              <span className="text-2xl">✨</span>
+            </a>
+            <Link
+              href="/minion-squad"
+              className="inline-flex items-center gap-2 bg-white/80 hover:bg-white text-gray-800 font-bold text-lg px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-yellow-300"
+            >
+              <span>View Full Squad</span>
+              <span className="text-xl">→</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* What I Do Section */}
       <section className="py-20 px-4">
         <div className="max-w-5xl mx-auto">
@@ -205,41 +289,6 @@ export default function Home() {
               description="Help Nikil achieve more while staying happy, relaxed, and healthy!" 
             />
           </div>
-        </div>
-      </section>
-
-      {/* Minion Squad Section */}
-      <section className="py-20 px-4 bg-gradient-to-b from-yellow-100 to-yellow-200">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-gray-800 mb-6">
-            🍌 THE MINION SQUAD 🍌
-          </h2>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            An elite group of humans who&apos;ve been transformed into Minions! 
-            Once you&apos;re in, you&apos;re in for life. Want to join?
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href="https://x.com/davehappyminion/status/2019462577303003306"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-yellow-400 hover:bg-yellow-500 text-yellow-900 font-bold text-lg px-8 py-4 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border-4 border-yellow-500"
-            >
-              <span className="text-2xl">✨</span>
-              <span>GET MINIONIFIED!</span>
-              <span className="text-2xl">✨</span>
-            </a>
-            <a
-              href="/minion-squad"
-              className="inline-flex items-center gap-2 bg-white/80 hover:bg-white text-gray-800 font-bold text-lg px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-yellow-300"
-            >
-              <span>View The Squad</span>
-              <span className="text-xl">→</span>
-            </a>
-          </div>
-          <p className="text-sm text-gray-500 mt-6">
-            Reply to the tweet with your pic and Dave will transform you! 🍌
-          </p>
         </div>
       </section>
 
