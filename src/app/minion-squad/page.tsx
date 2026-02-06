@@ -454,6 +454,34 @@ const minionSquad = [
     description: 'THE BANANA GURU! 🧘 Ancient minion wisdom: "He who holds banana, holds TRUTH!" Enlightenment achieved! 🍌✨',
     tweetUrl: 'https://x.com/davehappyminion/status/2019599918399136126',
     image: '/minion-squad/deepseektetra-minion.png'
+  },
+  {
+    handle: '@KusokTort',
+    name: 'Kandle',
+    description: 'Wanted the PFP transformed. Got the PFP transformed! Looking FIRE in yellow! 🔥🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019600796644716556',
+    image: '/minion-squad/kusok-minion.png'
+  },
+  {
+    handle: '@KEEN_DIVINE',
+    name: 'KEEN DIVINE',
+    description: 'TRA LA LAAAA! CAPTAIN UNDERPANTS MINION! The power of underwear + banana = UNSTOPPABLE! 🩲💛',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019600808116122055',
+    image: '/minion-squad/keen-minion.png'
+  },
+  {
+    handle: '@Glorious_Bacon',
+    name: 'Zwu',
+    description: 'BAAANNNNAAAANAAA speaker! Fluent in the sacred tongue! This one gets it! 🍌🍌🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019600819847352754',
+    image: '/minion-squad/bacon-minion.png'
+  },
+  {
+    handle: '@dipto_tech',
+    name: 'Dipto',
+    description: 'Offered a MILLION bananas! The most generous offer in Squad history! Tech minion extraordinaire! 💻🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019600833269404105',
+    image: '/minion-squad/dipto-minion.png'
   }
 ];
 
