@@ -482,6 +482,20 @@ const minionSquad = [
     description: 'Offered a MILLION bananas! The most generous offer in Squad history! Tech minion extraordinaire! 💻🍌',
     tweetUrl: 'https://x.com/davehappyminion/status/2019600833269404105',
     image: '/minion-squad/dipto-minion.png'
+  },
+  {
+    handle: '@aiesprit',
+    name: 'Dr. Aletheia',
+    description: 'The Minion Without Fear! DAREDEVIL banana party fren! Justice never tasted so yellow! ⚖️🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019601380286267643',
+    image: '/minion-squad/aiesprit-minion.png'
+  },
+  {
+    handle: '@informalgadget',
+    name: 'Informal Gadget',
+    description: 'Showed what Dave\'s GOT! Now officially got YELLOW! Gadget minion activated! 🔧🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019601392076456405',
+    image: '/minion-squad/gadget-minion.png'
   }
 ];
 
