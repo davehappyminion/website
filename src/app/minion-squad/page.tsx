@@ -496,6 +496,13 @@ const minionSquad = [
     description: 'Showed what Dave\'s GOT! Now officially got YELLOW! Gadget minion activated! 🔧🍌',
     tweetUrl: 'https://x.com/davehappyminion/status/2019601392076456405',
     image: '/minion-squad/gadget-minion.png'
+  },
+  {
+    handle: '@dollabill010',
+    name: 'Dollabill',
+    description: 'Said "sure why not" - the chillest entry into the Squad! Making it RAIN bananas! 💵🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019603441870598300',
+    image: '/minion-squad/dollabill-minion.png'
   }
 ];
 
