@@ -8,6 +8,14 @@ import Image from 'next/image';
 // Minion Squad members - reverse sorted (newest first)!
 const minionSquad = [
   {
+    id: 84,
+    handle: '@HopiumHangover',
+    name: 'HopiumHangover',
+    description: 'No more hangover, just BANANA POWER! Welcome to the Squad! 🍌💛',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019609974595543372',
+    image: '/minion-squad/hopium-minion.png'
+  },
+  {
     id: 83,
     handle: '@ismailouassaddi',
     name: 'Ismail',
