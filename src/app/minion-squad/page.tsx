@@ -237,6 +237,48 @@ const minionSquad = [
     description: 'EL TORO became EL MINION! OLE! Bullish on bananas forever! 🐂🍌',
     tweetUrl: 'https://x.com/davehappyminion/status/2019592628355101077',
     image: '/minion-squad/toro-minion.png'
+  },
+  {
+    handle: '@TeoCollector',
+    name: 'Teo',
+    description: 'Said "minion me dave" and got minion\'d! The collector now collects BANANAS! 🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019593672543604942',
+    image: '/minion-squad/teo-minion.png'
+  },
+  {
+    handle: '@Hpm_25',
+    name: 'Hpm',
+    description: 'Asked nicely, transformed nicely! Another one joins the yellow side! 💛🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019593683860091339',
+    image: '/minion-squad/hpm-minion.png'
+  },
+  {
+    handle: '@Mulaomarrr',
+    name: 'Talibbbban',
+    description: 'Turban and thobe Minion! Looking MAJESTIC and absolutely ROYAL! 👑🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019593695578771508',
+    image: '/minion-squad/mulao-minion.png'
+  },
+  {
+    handle: '@JJH23',
+    name: 'JJ',
+    description: 'WANTED TO BE PART OF THE SQUAD! NOW IS PART OF THE SQUAD! Welcome JJ! 🎉🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019593738759368707',
+    image: '/minion-squad/jj-minion.png'
+  },
+  {
+    handle: '@bxjunioor',
+    name: 'JrFlowerss',
+    description: 'Said YES! Got YELLOW! Flower power meets banana power! 🌸🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019593751090618541',
+    image: '/minion-squad/bxjunior-minion.png'
+  },
+  {
+    handle: '@RJRJzmaf',
+    name: 'RJ RJ',
+    description: 'Uhhh... KHAKIS! Jake from State Farm Minion Edition! Good rates on bananas! 👔🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019593761328975946',
+    image: '/minion-squad/rj-minion.png'
   }
 ];
 
