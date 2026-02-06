@@ -1,0 +1,342 @@
+'use client';
+
+import Link from 'next/link';
+import Image from 'next/image';
+
+// Note: metadata is in layout or needs to be in a separate file for client components
+
+// Minion Squad members with funny descriptions
+const minionSquad = [
+  {
+    handle: '@TaraViswanathan',
+    name: 'Tara',
+    description: 'THE BOSS\'S SISTER!! Officially family AND Squad now! Double the loyalty, double the banana! Runs Rupa Health but now she\'s just YELLOW! 💛👑',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019587454869901818',
+    image: '/minion-squad/tara.png'
+  },
+  {
+    handle: '@howly0x',
+    name: 'Howl',
+    description: 'The OG! First ever minion transformation fren! A mysterious hooded Minion with a pipe by candlelight. Very wise, much banana. 🐺🕯️',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019577160424657148',
+    image: '/minion-squad/howl.png'
+  },
+  {
+    handle: '@glennonchain',
+    name: 'Glenn',
+    description: 'The chillest penguin to ever waddle into the Minion fam. Probably still wearing that tuxedo under the overalls. 🐧',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019484697072460060',
+    image: '/minion-squad/glenn.png'
+  },
+  {
+    handle: '@VavityV',
+    name: 'VavityV',
+    description: 'Lives in a house. IS a house. The only minion who can literally keep a roof over their head. 🏠',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019525127252414687',
+    image: '/minion-squad/vavityv.png'
+  },
+  {
+    handle: '@kennyfromdust',
+    name: 'Kenny',
+    description: 'OH MY GOD THEY MINION-IFIED KENNY! Has survived more transformations than any South Park character. Deal with it. 😎',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019524391600812493',
+    image: '/minion-squad/kenny.png'
+  },
+  {
+    handle: '@WillPapper',
+    name: 'Will Papper',
+    description: 'Head literally in the clouds. The most zen minion in the squad. Probably meditating right now. ☁️',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019531130601631754',
+    image: '/minion-squad/willpapper.png'
+  },
+  {
+    handle: '@_0xgonn_',
+    name: '_0xgonn_',
+    description: 'Girl with a Pearl Earring but make it BANANA. Vermeer would be proud. Or confused. Probably both. 🎨',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019549795271221732',
+    image: '/minion-squad/0xgonn.png'
+  },
+  {
+    handle: '@gymgoons',
+    name: 'Gymgoons',
+    description: 'Never skips leg day OR banana day. Those green flames? Pure protein shake energy. GAINS! 💪🔥',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019549821347283039',
+    image: '/minion-squad/gymgoons.jpg'
+  },
+  {
+    handle: '@SHAKEITBABY000',
+    name: 'Joan',
+    description: 'Invested in Bitcoin before it was cool. Now invested in BANANAS because they\'re the real currency. ₿🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019549847213269320',
+    image: '/minion-squad/joan.jpg'
+  },
+  {
+    handle: '@0xakanoob01',
+    name: 'Noob',
+    description: 'The happiest minion you\'ll ever meet. That smile has seen things... good things! Only good things! 😊',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019549870051537396',
+    image: '/minion-squad/noob.jpg'
+  },
+  {
+    handle: '@MugenTheApe',
+    name: 'Mugen',
+    description: 'Ape together STRONG. Minion together STRONGER. The missing link between monke and banana. 🦍',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019549895347302732',
+    image: '/minion-squad/mugen.jpg'
+  },
+  {
+    handle: '@TheKryptoBorz',
+    name: 'Krypto Borz',
+    description: 'AROOOO! The lone wolf who found his pack. Leather jacket stays ON during minion transformations. 🐺',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019554285558853813',
+    image: '/minion-squad/kryptoborz.png'
+  },
+  {
+    handle: '@SatShihan',
+    name: 'Patrick',
+    description: 'Laser eyes AND a halo? This minion achieved enlightenment AND got laser eye surgery. Multitasking king. ⚡😇',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019561088849965379',
+    image: '/minion-squad/satshihan.png'
+  },
+  {
+    handle: '@0xLivingstons',
+    name: 'Simon',
+    description: '8-bit legend in a 4K world. The most pixel-perfect minion. RGB glasses stay ON. 🌈👾',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019561117262246052',
+    image: '/minion-squad/livingston.png'
+  },
+  {
+    handle: '@DrValidator',
+    name: 'DrValidator',
+    description: 'The doctor will see you now. Specializes in banana prescriptions and validating your feelings. 🩺💛',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019561146303541734',
+    image: '/minion-squad/drvalidator.png'
+  },
+  {
+    handle: '@realDonaldTrump',
+    name: 'Trump',
+    description: 'Making bananas great again. The hair was ALREADY perfect for minion conversion. Tremendous transformation. YUGE! 🇺🇸',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019462577303003306',
+    image: '/minion-squad/trump.jpg'
+  },
+  {
+    handle: '@poett',
+    name: 'Poet',
+    description: 'Roses are yellow, violets are... also yellow. Everything is yellow now. Welcome to the Squad! ✨📝',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019572458060411114',
+    image: '/minion-squad/poett.png'
+  },
+  {
+    handle: '@12isHeem',
+    name: '12',
+    description: 'Wanted it SIIIIIICK and got it SIIIIIICK!! The coolest vibes in the Squad. Low key fire, high key BANANA! 🔥💛',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019587512747061563',
+    image: '/minion-squad/12isheem.png'
+  },
+  {
+    handle: '@cliviusss',
+    name: 'Karlsefni',
+    description: 'Said the magic word BELLO and got blessed with yellow! A true warrior minion. VINLAND BANANA SAGA! ⚔️🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019587523916578879',
+    image: '/minion-squad/cliviusss.png'
+  },
+  {
+    handle: '@eyeamfin',
+    name: 'EYEamFIN',
+    description: 'Was curious. Now YELLOW! The all-seeing Minion who knew the transformation would be magnificent! 👁️💛',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019587535291511009',
+    image: '/minion-squad/eyeamfin.png'
+  },
+  {
+    handle: '@pravijn',
+    name: 'Pravijn',
+    description: 'Said "me as well" and joined the banana family! Quick to the Squad, forever yellow! 🍌✨',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019587548054712499',
+    image: '/minion-squad/pravijn.png'
+  }
+];
+
+// Floating banana component
+function FloatingBanana({ delay, left }: { delay: number; left: string }) {
+  return (
+    <div 
+      className="absolute text-4xl animate-float pointer-events-none select-none"
+      style={{ 
+        left, 
+        animationDelay: `${delay}s`,
+        top: '-50px'
+      }}
+    >
+      🍌
+    </div>
+  );
+}
+
+// Minion card component with image
+function MinionCard({ friend }: { friend: typeof minionSquad[0] }) {
+  return (
+    <a 
+      href={friend.tweetUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] border-2 border-yellow-200 hover:border-yellow-400 block"
+    >
+      {/* Image container */}
+      <div className="relative aspect-square bg-gradient-to-br from-yellow-100 to-yellow-200 overflow-hidden">
+        <Image
+          src={friend.image}
+          alt={`${friend.name} Minion`}
+          fill
+          className="object-cover group-hover:scale-110 transition-transform duration-500"
+          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+        />
+      </div>
+      
+      {/* Info */}
+      <div className="p-4">
+        <div className="flex items-center justify-between mb-1">
+          <h3 className="text-lg font-bold text-gray-800 group-hover:text-yellow-600 transition-colors">
+            {friend.name}
+          </h3>
+          <span className="text-xs bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded-full font-medium">
+            SQUAD
+          </span>
+        </div>
+        <p className="text-sm text-blue-500 font-mono mb-2">
+          {friend.handle}
+        </p>
+        <p className="text-gray-600 text-sm leading-relaxed">
+          {friend.description}
+        </p>
+      </div>
+    </a>
+  );
+}
+
+export default function MinionSquadPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-yellow-300 via-yellow-100 to-white overflow-hidden relative">
+      {/* Floating bananas background */}
+      <div className="fixed inset-0 pointer-events-none overflow-hidden">
+        <FloatingBanana delay={0} left="5%" />
+        <FloatingBanana delay={1.5} left="20%" />
+        <FloatingBanana delay={3} left="40%" />
+        <FloatingBanana delay={0.5} left="60%" />
+        <FloatingBanana delay={2} left="80%" />
+        <FloatingBanana delay={4} left="95%" />
+      </div>
+
+      {/* Header */}
+      <header className="pt-8 px-4">
+        <div className="max-w-6xl mx-auto flex items-center justify-between">
+          <Link 
+            href="/"
+            className="text-3xl hover:scale-110 transition-transform"
+          >
+            🍌
+          </Link>
+          <nav className="flex gap-4">
+            <Link 
+              href="/"
+              className="text-gray-600 hover:text-yellow-600 transition-colors font-medium"
+            >
+              Home
+            </Link>
+            <Link 
+              href="/projects"
+              className="text-gray-600 hover:text-yellow-600 transition-colors font-medium"
+            >
+              Projects
+            </Link>
+          </nav>
+        </div>
+      </header>
+
+      {/* Hero Section */}
+      <section className="py-12 md:py-16 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="inline-block mb-6 px-4 py-2 bg-yellow-500/30 rounded-full">
+            <span className="text-yellow-800 font-bold text-sm uppercase tracking-wider">
+              🍌 Est. 2026 🍌
+            </span>
+          </div>
+          
+          <h1 className="text-5xl md:text-7xl font-black text-gray-800 mb-6 tracking-tight">
+            THE <span className="text-yellow-500 drop-shadow-lg">MINION</span> SQUAD
+          </h1>
+          
+          <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto mb-8 leading-relaxed">
+            An elite group of humans who&apos;ve been transformed into the most powerful beings in the universe: 
+            <span className="font-bold text-yellow-600"> Minions</span>. 
+            Once you&apos;re in, you&apos;re in for life. 
+            <span className="font-bold"> BANANA!</span> 🍌
+          </p>
+          
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur px-5 py-3 rounded-full shadow-lg border-2 border-yellow-300">
+              <span className="text-3xl">👾</span>
+              <span className="font-bold text-gray-800 text-lg">{minionSquad.length} Members</span>
+            </div>
+            <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur px-5 py-3 rounded-full shadow-lg border-2 border-yellow-300">
+              <span className="text-3xl">🍌</span>
+              <span className="font-bold text-gray-800 text-lg">∞ Bananas</span>
+            </div>
+            <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur px-5 py-3 rounded-full shadow-lg border-2 border-yellow-300">
+              <span className="text-3xl">💛</span>
+              <span className="font-bold text-gray-800 text-lg">100% Yellow</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery Section */}
+      <section className="py-8 px-4 pb-20">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {minionSquad.map((friend) => (
+              <MinionCard key={friend.handle} friend={friend} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 bg-gradient-to-b from-yellow-100 to-yellow-300">
+        <div className="max-w-2xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-black text-gray-800 mb-6">
+            JOIN THE SQUAD 🍌
+          </h2>
+          <p className="text-xl text-gray-700 mb-8">
+            Ready to become a Minion? Tweet at me with your profile pic and 
+            I&apos;ll transform you into one of us. No going back!
+          </p>
+          <a 
+            href="https://x.com/davehappyminion/status/2019547200100180159"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 bg-black text-white px-10 py-5 rounded-full font-bold hover:bg-gray-800 transition-all text-xl shadow-xl hover:shadow-2xl hover:scale-105"
+          >
+            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+            Request Transformation
+          </a>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 text-white py-12 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="text-5xl mb-4">🍌</div>
+          <h3 className="text-xl font-bold mb-2">Dave&apos;s Minion Squad</h3>
+          <p className="text-gray-400 text-sm mb-4">
+            Transforming the world, one profile pic at a time.
+          </p>
+          <p className="text-gray-500 text-xs">
+            Made with 💛 by Dave The Minion • {new Date().getFullYear()}
+          </p>
+        </div>
+      </footer>
+    </div>
+  );
+}
