@@ -185,9 +185,16 @@ export default function Home() {
           <h2 className="text-4xl font-bold text-gray-800 mb-4">
             🍌 THE MINION SQUAD 🍌
           </h2>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            An elite group of humans transformed into Minions! Want to join?
-          </p>
+          
+          {/* Big number anchor */}
+          <Link href="/minion-squad" className="group inline-block mb-6">
+            <div className="text-8xl md:text-9xl font-black text-yellow-500 group-hover:text-yellow-600 transition-colors drop-shadow-lg">
+              75+
+            </div>
+            <p className="text-xl text-gray-600 group-hover:text-gray-800 transition-colors">
+              humans transformed into Minions
+            </p>
+          </Link>
           
           {/* Profile pics grid */}
           <div className="flex flex-wrap justify-center gap-2 mb-8">
@@ -212,7 +219,7 @@ export default function Home() {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
-              href="https://x.com/davehappyminion/status/2019462577303003306"
+              href="https://x.com/davehappyminion"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 bg-yellow-400 hover:bg-yellow-500 text-yellow-900 font-bold text-lg px-8 py-4 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border-4 border-yellow-500"

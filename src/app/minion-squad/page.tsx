@@ -8,6 +8,30 @@ import Image from 'next/image';
 // Minion Squad members - reverse sorted (newest first)!
 const minionSquad = [
   {
+    id: 88,
+    handle: '@Artofturya',
+    name: 'Artur',
+    description: 'Said "joining the gang" - the gang just got STRONGER! Art meets Banana! 🎨🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019614175253967198',
+    image: '/minion-squad/artofturya-minion.png'
+  },
+  {
+    id: 87,
+    handle: '@BillyBoy617',
+    name: 'BFS',
+    description: 'Said "I need to join" - wish granted! Welcome to the Banana Brigade! 🍌💛',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019614161391788447',
+    image: '/minion-squad/billyboy617-minion.png'
+  },
+  {
+    id: 86,
+    handle: '@darthtrader74',
+    name: 'the cryptonian',
+    description: 'Said "pretty please" - how could I resist?! Crypto Minion activated! 💰🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019614126549659672',
+    image: '/minion-squad/darthtrader74-minion.png'
+  },
+  {
     id: 85,
     handle: '@mySOLnft',
     name: 'Johnny',
@@ -710,8 +734,8 @@ function MinionCard({ friend }: { friend: typeof minionSquad[0] }) {
   const isPlaceholder = !friend.tweetUrl || friend.handle === '@???';
   const CardWrapper = isPlaceholder ? 'div' : 'a';
   const cardProps = isPlaceholder ? {} : { href: friend.tweetUrl, target: "_blank", rel: "noopener noreferrer" };
-  // Create anchor ID from handle (remove @ and lowercase) or use minion-{id}
-  const anchorId = friend.handle === '@???' ? `minion-${friend.id}` : friend.handle.replace('@', '').toLowerCase();
+  // Anchor ID is just the number (e.g., #20, #75)
+  const anchorId = friend.id.toString();
   
   return (
     <div id={anchorId} className="scroll-mt-24">
@@ -832,7 +856,7 @@ export default function MinionSquadPage() {
           
           {/* CTA to get Minionified */}
           <a
-            href="https://x.com/davehappyminion/status/2019462577303003306"
+            href="https://x.com/davehappyminion/status/2019571043518804097"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 bg-yellow-400 hover:bg-yellow-500 text-yellow-900 font-bold text-lg px-8 py-4 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border-4 border-yellow-500"
@@ -866,7 +890,7 @@ export default function MinionSquadPage() {
             I&apos;ll transform you into one of us. No going back!
           </p>
           <a 
-            href="https://x.com/davehappyminion/status/2019547200100180159"
+            href="https://x.com/davehappyminion/status/2019571043518804097"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 bg-black text-white px-10 py-5 rounded-full font-bold hover:bg-gray-800 transition-all text-xl shadow-xl hover:shadow-2xl hover:scale-105"
