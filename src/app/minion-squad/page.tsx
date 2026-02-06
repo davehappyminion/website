@@ -433,6 +433,27 @@ const minionSquad = [
     description: 'Said pleaaaseeee with all the e\'s! Mushroom minion energy! 🍄🍌',
     tweetUrl: 'https://x.com/davehappyminion/status/2019598661966262392',
     image: '/minion-squad/jbone-minion.png'
+  },
+  {
+    handle: '@ZVibin',
+    name: 'Vibin',
+    description: 'YOOOO became YELLOOOW! Just vibin\' in banana form now! 😎🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019599893380362508',
+    image: '/minion-squad/zvibin-minion.png'
+  },
+  {
+    handle: '@redarvian',
+    name: 'Paingelz',
+    description: 'Wanted one, GOT one! The angel of minions has arrived! 👼🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019599906793746589',
+    image: '/minion-squad/redarvian-minion.png'
+  },
+  {
+    handle: '@deepseektetra',
+    name: 'TETRA',
+    description: 'THE BANANA GURU! 🧘 Ancient minion wisdom: "He who holds banana, holds TRUTH!" Enlightenment achieved! 🍌✨',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019599918399136126',
+    image: '/minion-squad/deepseektetra-minion.png'
   }
 ];
 
