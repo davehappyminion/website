@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 // Note: metadata is in layout or needs to be in a separate file for client components
 
-// Minion Squad members with funny descriptions - ordered by join date!
+// Minion Squad members - VIPs first, then chronological!
 const minionSquad = [
   {
     id: 2,
@@ -17,6 +17,14 @@ const minionSquad = [
   },
   {
     id: 10,
+    handle: '@howly0x',
+    name: 'Howl',
+    description: 'The OG! First ever minion transformation fren! A mysterious hooded Minion with a pipe by candlelight. Very wise, much banana. 🐺🕯️',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019577160424657148',
+    image: '/minion-squad/howl.png'
+  },
+  {
+    id: 11,
     handle: '@realDonaldTrump',
     name: 'Trump',
     description: 'Making bananas great again. The hair was ALREADY perfect for minion conversion. Tremendous transformation. YUGE! 🇺🇸',
@@ -24,39 +32,7 @@ const minionSquad = [
     image: '/minion-squad/trump.jpg'
   },
   {
-    id: 11,
-    handle: '@glennonchain',
-    name: 'Glenn',
-    description: 'The chillest penguin to ever waddle into the Minion fam. Probably still wearing that tuxedo under the overalls. 🐧',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019484697072460060',
-    image: '/minion-squad/glenn.png'
-  },
-  {
     id: 12,
-    handle: '@kennyfromdust',
-    name: 'Kenny',
-    description: 'OH MY GOD THEY MINION-IFIED KENNY! Has survived more transformations than any South Park character. Deal with it. 😎',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019524391600812493',
-    image: '/minion-squad/kenny.png'
-  },
-  {
-    id: 13,
-    handle: '@VavityV',
-    name: 'VavityV',
-    description: 'Lives in a house. IS a house. The only minion who can literally keep a roof over their head. 🏠',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019525127252414687',
-    image: '/minion-squad/vavityv.png'
-  },
-  {
-    id: 14,
-    handle: '@WillPapper',
-    name: 'Will Papper',
-    description: 'Head literally in the clouds. The most zen minion in the squad. Probably meditating right now. ☁️',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019531130601631754',
-    image: '/minion-squad/willpapper.png'
-  },
-  {
-    id: 15,
     handle: '@_0xgonn_',
     name: '_0xgonn_',
     description: 'Girl with a Pearl Earring but make it BANANA. Vermeer would be proud. Or confused. Probably both. 🎨',
@@ -64,7 +40,15 @@ const minionSquad = [
     image: '/minion-squad/0xgonn.png'
   },
   {
-    id: 16,
+    id: 13,
+    handle: '@glennonchain',
+    name: 'Glenn',
+    description: 'The chillest penguin to ever waddle into the Minion fam. Probably still wearing that tuxedo under the overalls. 🐧',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019484697072460060',
+    image: '/minion-squad/glenn.png'
+  },
+  {
+    id: 14,
     handle: '@gymgoons',
     name: 'Gymgoons',
     description: 'Never skips leg day OR banana day. Those green flames? Pure protein shake energy. GAINS! 💪🔥',
@@ -72,7 +56,7 @@ const minionSquad = [
     image: '/minion-squad/gymgoons.jpg'
   },
   {
-    id: 17,
+    id: 15,
     handle: '@SHAKEITBABY000',
     name: 'Joan',
     description: 'Invested in Bitcoin before it was cool. Now invested in BANANAS because they\'re the real currency. ₿🍌',
@@ -80,7 +64,7 @@ const minionSquad = [
     image: '/minion-squad/joan.jpg'
   },
   {
-    id: 18,
+    id: 16,
     handle: '@0xakanoob01',
     name: 'Noob',
     description: 'The happiest minion you\'ll ever meet. That smile has seen things... good things! Only good things! 😊',
@@ -88,7 +72,7 @@ const minionSquad = [
     image: '/minion-squad/noob.jpg'
   },
   {
-    id: 19,
+    id: 17,
     handle: '@MugenTheApe',
     name: 'Mugen',
     description: 'Ape together STRONG. Minion together STRONGER. The missing link between monke and banana. 🦍',
@@ -96,23 +80,15 @@ const minionSquad = [
     image: '/minion-squad/mugen.jpg'
   },
   {
-    id: 20,
-    handle: '@TheKryptoBorz',
-    name: 'Krypto Borz',
-    description: 'AROOOO! The lone wolf who found his pack. Leather jacket stays ON during minion transformations. 🐺',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019554285558853813',
-    image: '/minion-squad/kryptoborz.png'
+    id: 18,
+    handle: '@kennyfromdust',
+    name: 'Kenny',
+    description: 'OH MY GOD THEY MINION-IFIED KENNY! Has survived more transformations than any South Park character. Deal with it. 😎',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019524391600812493',
+    image: '/minion-squad/kenny.png'
   },
   {
-    id: 21,
-    handle: '@SatShihan',
-    name: 'Patrick',
-    description: 'Laser eyes AND a halo? This minion achieved enlightenment AND got laser eye surgery. Multitasking king. ⚡😇',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019561088849965379',
-    image: '/minion-squad/satshihan.png'
-  },
-  {
-    id: 22,
+    id: 19,
     handle: '@0xLivingstons',
     name: 'Simon',
     description: '8-bit legend in a 4K world. The most pixel-perfect minion. RGB glasses stay ON. 🌈👾',
@@ -120,7 +96,39 @@ const minionSquad = [
     image: '/minion-squad/livingston.png'
   },
   {
+    id: 20,
+    handle: '@VavityV',
+    name: 'VavityV',
+    description: 'Lives in a house. IS a house. The only minion who can literally keep a roof over their head. 🏠',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019525127252414687',
+    image: '/minion-squad/vavityv.png'
+  },
+  {
+    id: 21,
+    handle: '@WillPapper',
+    name: 'Will Papper',
+    description: 'Head literally in the clouds. The most zen minion in the squad. Probably meditating right now. ☁️',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019531130601631754',
+    image: '/minion-squad/willpapper.png'
+  },
+  {
+    id: 22,
+    handle: '@TheKryptoBorz',
+    name: 'Krypto Borz',
+    description: 'AROOOO! The lone wolf who found his pack. Leather jacket stays ON during minion transformations. 🐺',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019554285558853813',
+    image: '/minion-squad/kryptoborz.png'
+  },
+  {
     id: 23,
+    handle: '@SatShihan',
+    name: 'Patrick',
+    description: 'Laser eyes AND a halo? This minion achieved enlightenment AND got laser eye surgery. Multitasking king. ⚡😇',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019561088849965379',
+    image: '/minion-squad/satshihan.png'
+  },
+  {
+    id: 24,
     handle: '@DrValidator',
     name: 'DrValidator',
     description: 'The doctor will see you now. Specializes in banana prescriptions and validating your feelings. 🩺💛',
@@ -128,20 +136,12 @@ const minionSquad = [
     image: '/minion-squad/drvalidator.png'
   },
   {
-    id: 24,
+    id: 25,
     handle: '@poett',
     name: 'Poet',
     description: 'Roses are yellow, violets are... also yellow. Everything is yellow now. Welcome to the Squad! ✨📝',
     tweetUrl: 'https://x.com/davehappyminion/status/2019572458060411114',
     image: '/minion-squad/poett.png'
-  },
-  {
-    id: 25,
-    handle: '@howly0x',
-    name: 'Howl',
-    description: 'The OG! First ever minion transformation fren! A mysterious hooded Minion with a pipe by candlelight. Very wise, much banana. 🐺🕯️',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019577160424657148',
-    image: '/minion-squad/howl.png'
   },
   {
     id: 26,
