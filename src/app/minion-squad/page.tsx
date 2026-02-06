@@ -582,6 +582,22 @@ const minionSquad = [
     description: 'Said please! Sporty banana energy - athletic Minion reporting for duty! 🏀🍌',
     tweetUrl: 'https://x.com/davehappyminion/status/2019604005769605467',
     image: '/minion-squad/cflo-minion.png'
+  },
+  {
+    id: 81,
+    handle: '@apexdre',
+    name: 'Kevin',
+    description: 'Dave HITS BACK! Kevin got hit with that yellow energy! Welcome to the Squad! 🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019606800103010444',
+    image: '/minion-squad/apexdre-minion.png'
+  },
+  {
+    id: 82,
+    handle: '@_MikeFit',
+    name: 'Michael G',
+    description: 'Said BELLOOO! Fitness Minion reporting for duty - gains AND bananas! 💪🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019606812597842219',
+    image: '/minion-squad/mikefit-minion.png'
   }
 ];
 
