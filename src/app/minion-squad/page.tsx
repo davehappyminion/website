@@ -279,6 +279,83 @@ const minionSquad = [
     description: 'Uhhh... KHAKIS! Jake from State Farm Minion Edition! Good rates on bananas! 👔🍌',
     tweetUrl: 'https://x.com/davehappyminion/status/2019593761328975946',
     image: '/minion-squad/rj-minion.png'
+  },
+  {
+    handle: '@iluvshalio',
+    name: 'FriezaYelling',
+    description: 'UwU minion activated! The cutest transformation yet! Banana UwU! 🥺🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019595259936911741',
+    image: '/minion-squad/shalio-minion.png'
+  },
+  {
+    handle: '@that1guyjustn',
+    name: 'Chester Mansfield',
+    description: 'Let\'s GO! Chester is IN and looking YELLOW! 🎯🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019595269747425767',
+    image: '/minion-squad/chester-minion.png'
+  },
+  {
+    handle: '@NuggetPlease',
+    name: 'Nuggets',
+    description: 'Nugget Minion ready to serve! Part chicken, part banana, all yellow! 🍗🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019595280837193931',
+    image: '/minion-squad/nugget-minion.png'
+  },
+  {
+    handle: '@MichaelWittwe11',
+    name: 'Michael Wittwer',
+    description: 'Wanted in. Got in. Michael is officially YELLOW! 💛🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019595292996514034',
+    image: '/minion-squad/michael-minion.png'
+  },
+  {
+    handle: '@jksbeih',
+    name: 'Radz',
+    description: 'Said please, got blessed! Radz is now part of the banana family! 🙏🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019595338416550036',
+    image: '/minion-squad/radz-minion.png'
+  },
+  {
+    handle: '@iamlai8',
+    name: 'I am the Late',
+    description: 'Me me! You you! Now we we! Part of the Squad! 🎉🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019595348696789413',
+    image: '/minion-squad/late-minion.png'
+  },
+  {
+    handle: '@AdriFries',
+    name: 'Adri Fries',
+    description: 'Requested TWO eyes specifically. Got TWO eyes! Customer satisfaction: 100%! 👀🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019595362487439659',
+    image: '/minion-squad/adri-minion.png'
+  },
+  {
+    handle: '@KaneSmanda',
+    name: 'Kane Smanda',
+    description: 'Yes plz = Yes banana! Kane is officially part of the yellow team! 💛🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019595373199913279',
+    image: '/minion-squad/kane-minion.png'
+  },
+  {
+    handle: '@ovargas17',
+    name: 'Omar Vargas',
+    description: 'How about Omar?? Omar gets a minion too!! Everyone gets minions! 🎁🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019595415251775976',
+    image: '/minion-squad/omar-minion.png'
+  },
+  {
+    handle: '@guillewm02',
+    name: 'Unsatisfied',
+    description: 'Asked for Dave, got Dave! No longer unsatisfied - now YELLOW! 😄🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019595425880371219',
+    image: '/minion-squad/guille-minion.png'
+  },
+  {
+    handle: '@miguel18NWTS',
+    name: 'Miguel',
+    description: 'Dancing into the Squad! 🕺 Miguel brought the moves, we brought the yellow! 💛🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019595438337454227',
+    image: '/minion-squad/miguel-minion.png'
   }
 ];
 
