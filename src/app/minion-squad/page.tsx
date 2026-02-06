@@ -5,591 +5,15 @@ import Image from 'next/image';
 
 // Note: metadata is in layout or needs to be in a separate file for client components
 
-// Minion Squad members - VIPs first, then chronological!
+// Minion Squad members - reverse sorted (newest first)!
 const minionSquad = [
   {
-    id: 2,
-    handle: '@TaraViswanathan',
-    name: 'Tara',
-    description: 'THE BOSS\'S SISTER!! Officially family AND Squad now! Double the loyalty, double the banana! Runs Rupa Health but now she\'s just YELLOW! 💛👑',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019587454869901818',
-    image: '/minion-squad/tara.png'
-  },
-  {
-    id: 10,
-    handle: '@howly0x',
-    name: 'Howl',
-    description: 'The OG! First ever minion transformation fren! A mysterious hooded Minion with a pipe by candlelight. Very wise, much banana. 🐺🕯️',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019577160424657148',
-    image: '/minion-squad/howl.png'
-  },
-  {
-    id: 11,
-    handle: '@realDonaldTrump',
-    name: 'Trump',
-    description: 'Making bananas great again. The hair was ALREADY perfect for minion conversion. Tremendous transformation. YUGE! 🇺🇸',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019462577303003306',
-    image: '/minion-squad/trump.jpg'
-  },
-  {
-    id: 12,
-    handle: '@_0xgonn_',
-    name: '_0xgonn_',
-    description: 'Girl with a Pearl Earring but make it BANANA. Vermeer would be proud. Or confused. Probably both. 🎨',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019549795271221732',
-    image: '/minion-squad/0xgonn.png'
-  },
-  {
-    id: 13,
-    handle: '@glennonchain',
-    name: 'Glenn',
-    description: 'The chillest penguin to ever waddle into the Minion fam. Probably still wearing that tuxedo under the overalls. 🐧',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019484697072460060',
-    image: '/minion-squad/glenn.png'
-  },
-  {
-    id: 14,
-    handle: '@gymgoons',
-    name: 'Gymgoons',
-    description: 'Never skips leg day OR banana day. Those green flames? Pure protein shake energy. GAINS! 💪🔥',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019549821347283039',
-    image: '/minion-squad/gymgoons.jpg'
-  },
-  {
-    id: 15,
-    handle: '@SHAKEITBABY000',
-    name: 'Joan',
-    description: 'Invested in Bitcoin before it was cool. Now invested in BANANAS because they\'re the real currency. ₿🍌',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019549847213269320',
-    image: '/minion-squad/joan.jpg'
-  },
-  {
-    id: 16,
-    handle: '@0xakanoob01',
-    name: 'Noob',
-    description: 'The happiest minion you\'ll ever meet. That smile has seen things... good things! Only good things! 😊',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019549870051537396',
-    image: '/minion-squad/noob.jpg'
-  },
-  {
-    id: 17,
-    handle: '@MugenTheApe',
-    name: 'Mugen',
-    description: 'Ape together STRONG. Minion together STRONGER. The missing link between monke and banana. 🦍',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019549895347302732',
-    image: '/minion-squad/mugen.jpg'
-  },
-  {
-    id: 18,
-    handle: '@kennyfromdust',
-    name: 'Kenny',
-    description: 'OH MY GOD THEY MINION-IFIED KENNY! Has survived more transformations than any South Park character. Deal with it. 😎',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019524391600812493',
-    image: '/minion-squad/kenny.png'
-  },
-  {
-    id: 19,
-    handle: '@0xLivingstons',
-    name: 'Simon',
-    description: '8-bit legend in a 4K world. The most pixel-perfect minion. RGB glasses stay ON. 🌈👾',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019561117262246052',
-    image: '/minion-squad/livingston.png'
-  },
-  {
-    id: 20,
-    handle: '@VavityV',
-    name: 'VavityV',
-    description: 'Lives in a house. IS a house. The only minion who can literally keep a roof over their head. 🏠',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019525127252414687',
-    image: '/minion-squad/vavityv.png'
-  },
-  {
-    id: 21,
-    handle: '@WillPapper',
-    name: 'Will Papper',
-    description: 'Head literally in the clouds. The most zen minion in the squad. Probably meditating right now. ☁️',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019531130601631754',
-    image: '/minion-squad/willpapper.png'
-  },
-  {
-    id: 22,
-    handle: '@TheKryptoBorz',
-    name: 'Krypto Borz',
-    description: 'AROOOO! The lone wolf who found his pack. Leather jacket stays ON during minion transformations. 🐺',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019554285558853813',
-    image: '/minion-squad/kryptoborz.png'
-  },
-  {
-    id: 23,
-    handle: '@SatShihan',
-    name: 'Patrick',
-    description: 'Laser eyes AND a halo? This minion achieved enlightenment AND got laser eye surgery. Multitasking king. ⚡😇',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019561088849965379',
-    image: '/minion-squad/satshihan.png'
-  },
-  {
-    id: 24,
-    handle: '@DrValidator',
-    name: 'DrValidator',
-    description: 'The doctor will see you now. Specializes in banana prescriptions and validating your feelings. 🩺💛',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019561146303541734',
-    image: '/minion-squad/drvalidator.png'
-  },
-  {
-    id: 25,
-    handle: '@poett',
-    name: 'Poet',
-    description: 'Roses are yellow, violets are... also yellow. Everything is yellow now. Welcome to the Squad! ✨📝',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019572458060411114',
-    image: '/minion-squad/poett.png'
-  },
-  {
-    id: 26,
-    handle: '@12isHeem',
-    name: '12',
-    description: 'Wanted it SIIIIIICK and got it SIIIIIICK!! The coolest vibes in the Squad. Low key fire, high key BANANA! 🔥💛',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019587512747061563',
-    image: '/minion-squad/12isheem.png'
-  },
-  {
-    id: 27,
-    handle: '@cliviusss',
-    name: 'Karlsefni',
-    description: 'Said the magic word BELLO and got blessed with yellow! A true warrior minion. VINLAND BANANA SAGA! ⚔️🍌',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019587523916578879',
-    image: '/minion-squad/cliviusss.png'
-  },
-  {
-    id: 28,
-    handle: '@eyeamfin',
-    name: 'EYEamFIN',
-    description: 'Was curious. Now YELLOW! The all-seeing Minion who knew the transformation would be magnificent! 👁️💛',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019587535291511009',
-    image: '/minion-squad/eyeamfin.png'
-  },
-  {
-    id: 29,
-    handle: '@pravijn',
-    name: 'Pravijn',
-    description: 'Said "me as well" and joined the banana family! Quick to the Squad, forever yellow! 🍌✨',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019587548054712499',
-    image: '/minion-squad/pravijn.png'
-  },
-  {
-    id: 30,
-    handle: '@lonnieligginsJR',
-    name: 'Lonnie Liggins',
-    description: 'The 3️⃣ legend! Stepped up, got transformed, became yellow. Another one joins the banana revolution! 🏀💛',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019590091983766008',
-    image: '/minion-squad/lonnie.png'
-  },
-  {
-    id: 31,
-    handle: '@23jordan10hawki',
-    name: 'Todd Renaud',
-    description: 'Dropped in with a pic, left as a Minion! The transformation was swift and yellow! 🍌💛',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019591138148270410',
-    image: '/minion-squad/todd.png'
-  },
-  {
-    id: 32,
-    handle: '@jetpippo',
-    name: 'JET',
-    description: 'JET MINION READY FOR TAKEOFF! 🛸 Flying high in the banana skies! Houston, we have YELLOW! 🍌',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019591150496251981',
-    image: '/minion-squad/jet.png'
-  },
-  {
-    id: 33,
-    handle: '@LeoJavier99',
-    name: 'Leo',
-    description: 'Asked to be turned into one. Got turned into one. GET AFTER IT in yellow now! 💪🍌',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019591162580070635',
-    image: '/minion-squad/leo.png'
-  },
-  {
-    id: 34,
-    handle: '@chijr3005',
-    name: 'Junior Resailor',
-    description: 'Dropped the pic, got the transformation! Sailing into yellow waters now! ⛵🍌',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019592514827669687',
-    image: '/minion-squad/chijr-minion.png'
-  },
-  {
-    id: 35,
-    handle: '@premiumpeso',
-    name: 'Peso',
-    description: 'PREMIUM MINION activated! Top tier transformation for a top tier fren! 💰🍌',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019592525330395537',
-    image: '/minion-squad/peso-minion.png'
-  },
-  {
-    id: 36,
-    handle: '@WF72431',
-    name: '404PandaNotFound',
-    description: '404 Panda was NOT FOUND... until now! Panda Minion DISCOVERED! 🐼🍌',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019592536562544681',
-    image: '/minion-squad/panda-minion.png'
-  },
-  {
-    id: 37,
-    handle: '@esedaniel06fomo',
-    name: 'Esedaniel',
-    description: 'Wanted to be a minion. Said BANANA. Became a minion. The formula works! 🍌💛',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019592546553672141',
-    image: '/minion-squad/esedaniel-minion.png'
-  },
-  {
-    id: 38,
-    handle: '@aiquanter',
-    name: 'Cat Lover',
-    description: 'Assembled as requested! Cat vibes meet banana vibes - the purrfect combination! 🐱🍌',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019592594104123405',
-    image: '/minion-squad/aiquanter-minion.png'
-  },
-  {
-    id: 39,
-    handle: '@imb4ck_',
-    name: 'imb4ck',
-    description: 'Back and YELLOW! 🇩🇴 Dominican Minion representing! No retreat, no surrender! 💪🍌',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019592604946694378',
-    image: '/minion-squad/imback-minion.png'
-  },
-  {
-    id: 40,
-    handle: '@ResellCalendar',
-    name: 'RC',
-    description: 'Wanted IN, got IN! The Resell Calendar is now the Banana Calendar! 📅🍌',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019592618783699210',
-    image: '/minion-squad/resell-minion.png'
-  },
-  {
-    id: 41,
-    handle: '@toritobullish',
-    name: 'El Toro',
-    description: 'EL TORO became EL MINION! OLE! Bullish on bananas forever! 🐂🍌',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019592628355101077',
-    image: '/minion-squad/toro-minion.png'
-  },
-  {
-    id: 42,
-    handle: '@TeoCollector',
-    name: 'Teo',
-    description: 'Said "minion me dave" and got minion\'d! The collector now collects BANANAS! 🍌',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019593672543604942',
-    image: '/minion-squad/teo-minion.png'
-  },
-  {
-    id: 43,
-    handle: '@Hpm_25',
-    name: 'Hpm',
-    description: 'Asked nicely, transformed nicely! Another one joins the yellow side! 💛🍌',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019593683860091339',
-    image: '/minion-squad/hpm-minion.png'
-  },
-  {
-    id: 44,
-    handle: '@Mulaomarrr',
-    name: 'Talibbbban',
-    description: 'Turban and thobe Minion! Looking MAJESTIC and absolutely ROYAL! 👑🍌',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019593695578771508',
-    image: '/minion-squad/mulao-minion.png'
-  },
-  {
-    id: 45,
-    handle: '@JJH23',
-    name: 'JJ',
-    description: 'WANTED TO BE PART OF THE SQUAD! NOW IS PART OF THE SQUAD! Welcome JJ! 🎉🍌',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019593738759368707',
-    image: '/minion-squad/jj-minion.png'
-  },
-  {
-    id: 46,
-    handle: '@bxjunioor',
-    name: 'JrFlowerss',
-    description: 'Said YES! Got YELLOW! Flower power meets banana power! 🌸🍌',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019593751090618541',
-    image: '/minion-squad/bxjunior-minion.png'
-  },
-  {
-    id: 47,
-    handle: '@RJRJzmaf',
-    name: 'RJ RJ',
-    description: 'Uhhh... KHAKIS! Jake from State Farm Minion Edition! Good rates on bananas! 👔🍌',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019593761328975946',
-    image: '/minion-squad/rj-minion.png'
-  },
-  {
-    id: 48,
-    handle: '@iluvshalio',
-    name: 'FriezaYelling',
-    description: 'UwU minion activated! The cutest transformation yet! Banana UwU! 🥺🍌',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019595259936911741',
-    image: '/minion-squad/shalio-minion.png'
-  },
-  {
-    id: 49,
-    handle: '@that1guyjustn',
-    name: 'Chester Mansfield',
-    description: 'Let\'s GO! Chester is IN and looking YELLOW! 🎯🍌',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019595269747425767',
-    image: '/minion-squad/chester-minion.png'
-  },
-  {
-    id: 50,
-    handle: '@NuggetPlease',
-    name: 'Nuggets',
-    description: 'Nugget Minion ready to serve! Part chicken, part banana, all yellow! 🍗🍌',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019595280837193931',
-    image: '/minion-squad/nugget-minion.png'
-  },
-  {
-    id: 51,
-    handle: '@MichaelWittwe11',
-    name: 'Michael Wittwer',
-    description: 'Wanted in. Got in. Michael is officially YELLOW! 💛🍌',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019595292996514034',
-    image: '/minion-squad/michael-minion.png'
-  },
-  {
-    id: 52,
-    handle: '@jksbeih',
-    name: 'Radz',
-    description: 'Said please, got blessed! Radz is now part of the banana family! 🙏🍌',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019595338416550036',
-    image: '/minion-squad/radz-minion.png'
-  },
-  {
-    id: 53,
-    handle: '@iamlai8',
-    name: 'I am the Late',
-    description: 'Me me! You you! Now we we! Part of the Squad! 🎉🍌',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019595348696789413',
-    image: '/minion-squad/late-minion.png'
-  },
-  {
-    id: 54,
-    handle: '@AdriFries',
-    name: 'Adri Fries',
-    description: 'Requested TWO eyes specifically. Got TWO eyes! Customer satisfaction: 100%! 👀🍌',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019595362487439659',
-    image: '/minion-squad/adri-minion.png'
-  },
-  {
-    id: 55,
-    handle: '@KaneSmanda',
-    name: 'Kane Smanda',
-    description: 'Yes plz = Yes banana! Kane is officially part of the yellow team! 💛🍌',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019595373199913279',
-    image: '/minion-squad/kane-minion.png'
-  },
-  {
-    id: 56,
-    handle: '@ovargas17',
-    name: 'Omar Vargas',
-    description: 'How about Omar?? Omar gets a minion too!! Everyone gets minions! 🎁🍌',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019595415251775976',
-    image: '/minion-squad/omar-minion.png'
-  },
-  {
-    id: 57,
-    handle: '@guillewm02',
-    name: 'Unsatisfied',
-    description: 'Asked for Dave, got Dave! No longer unsatisfied - now YELLOW! 😄🍌',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019595425880371219',
-    image: '/minion-squad/guille-minion.png'
-  },
-  {
-    id: 58,
-    handle: '@miguel18NWTS',
-    name: 'Miguel',
-    description: 'Dancing into the Squad! 🕺 Miguel brought the moves, we brought the yellow! 💛🍌',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019595438337454227',
-    image: '/minion-squad/miguel-minion.png'
-  },
-  {
-    id: 59,
-    handle: '@BettingCrows',
-    name: 'Betting Crows',
-    description: 'Betting on bananas! The odds are always in yellow\'s favor! 🎰🍌',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019597818697224675',
-    image: '/minion-squad/bettingcrows-minion.png'
-  },
-  {
-    id: 60,
-    handle: '@JGrayBKK',
-    name: 'JGRAYBKK',
-    description: 'Asked Banana? Got BANANA! The answer is always banana! 🍌💛',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019597830239973486',
-    image: '/minion-squad/jgray-minion.png'
-  },
-  {
-    id: 61,
-    handle: '@Nosleepwhenjim1',
-    name: 'Nosleepwhenjimbosintown',
-    description: 'No sleep when the minions are in town! 24/7 banana energy! 😴🍌',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019597841929228447',
-    image: '/minion-squad/nosleep-minion.png'
-  },
-  {
-    id: 62,
-    handle: '@DC2_Orlando',
-    name: 'Orlando Gonzalez',
-    description: 'Puerto Rico represent! 🇵🇷 Bringing the island vibes to the Squad! 💛🍌',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019597853543580063',
-    image: '/minion-squad/orlando-minion.png'
-  },
-  {
-    id: 63,
-    handle: '@JayhawkNFT',
-    name: 'Jayhawk.eth',
-    description: 'Said BELLO, instant admission! Rock chalk, banana hawk! 🦅🍌',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019597907373232205',
-    image: '/minion-squad/jayhawk-minion.png'
-  },
-  {
-    id: 64,
-    handle: '@MrSeventeenF1ve',
-    name: 'EndDee',
-    description: 'Wanted one, got one! EndDee is now BeginYellow! 💛🍌',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019597918714634728',
-    image: '/minion-squad/enddee-minion.png'
-  },
-  {
-    id: 65,
-    handle: '@samgfortune',
-    name: 'Sam',
-    description: 'Fortune favors the yellow! Sam\'s luck just got brighter! 🍀🍌',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019597929078489415',
-    image: '/minion-squad/sam-minion.png'
-  },
-  {
-    id: 66,
-    handle: '@NFToblivion',
-    name: 'Oblivion',
-    description: 'Smol minion, BIG BRAIN! The smartest yellow in the Squad! 🧠🍌',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019597939178377547',
-    image: '/minion-squad/oblivion-minion.png'
-  },
-  {
-    id: 67,
-    handle: '@JustinCDrake',
-    name: 'Justin Drake',
-    description: 'Said please, got blessed! Manners make the minion! 🙏🍌',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019597949735694441',
-    image: '/minion-squad/justin-minion.png'
-  },
-  {
-    id: 68,
-    handle: '@alexxhongg5378',
-    name: 'Alexx Hong',
-    description: 'Wanted in, got in! Another OG joins the banana revolution! 💛🍌',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019598651677655078',
-    image: '/minion-squad/alexx-minion.png'
-  },
-  {
-    id: 69,
-    handle: '@JB0NE_',
-    name: 'JBONE',
-    description: 'Said pleaaaseeee with all the e\'s! Mushroom minion energy! 🍄🍌',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019598661966262392',
-    image: '/minion-squad/jbone-minion.png'
-  },
-  {
-    id: 70,
-    handle: '@ZVibin',
-    name: 'Vibin',
-    description: 'YOOOO became YELLOOOW! Just vibin\' in banana form now! 😎🍌',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019599893380362508',
-    image: '/minion-squad/zvibin-minion.png'
-  },
-  {
-    id: 71,
-    handle: '@redarvian',
-    name: 'Paingelz',
-    description: 'Wanted one, GOT one! The angel of minions has arrived! 👼🍌',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019599906793746589',
-    image: '/minion-squad/redarvian-minion.png'
-  },
-  {
-    id: 72,
-    handle: '@deepseektetra',
-    name: 'TETRA',
-    description: 'THE BANANA GURU! 🧘 Ancient minion wisdom: "He who holds banana, holds TRUTH!" Enlightenment achieved! 🍌✨',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019599918399136126',
-    image: '/minion-squad/deepseektetra-minion.png'
-  },
-  {
-    id: 73,
-    handle: '@KusokTort',
-    name: 'Kandle',
-    description: 'Wanted the PFP transformed. Got the PFP transformed! Looking FIRE in yellow! 🔥🍌',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019600796644716556',
-    image: '/minion-squad/kusok-minion.png'
-  },
-  {
-    id: 74,
-    handle: '@KEEN_DIVINE',
-    name: 'KEEN DIVINE',
-    description: 'TRA LA LAAAA! CAPTAIN UNDERPANTS MINION! The power of underwear + banana = UNSTOPPABLE! 🩲💛',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019600808116122055',
-    image: '/minion-squad/keen-minion.png'
-  },
-  {
-    id: 75,
-    handle: '@Glorious_Bacon',
-    name: 'Zwu',
-    description: 'BAAANNNNAAAANAAA speaker! Fluent in the sacred tongue! This one gets it! 🍌🍌🍌',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019600819847352754',
-    image: '/minion-squad/bacon-minion.png'
-  },
-  {
-    id: 76,
-    handle: '@dipto_tech',
-    name: 'Dipto',
-    description: 'Offered a MILLION bananas! The most generous offer in Squad history! Tech minion extraordinaire! 💻🍌',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019600833269404105',
-    image: '/minion-squad/dipto-minion.png'
-  },
-  {
-    id: 77,
-    handle: '@aiesprit',
-    name: 'Dr. Aletheia',
-    description: 'The Minion Without Fear! DAREDEVIL banana party fren! Justice never tasted so yellow! ⚖️🍌',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019601380286267643',
-    image: '/minion-squad/aiesprit-minion.png'
-  },
-  {
-    id: 78,
-    handle: '@informalgadget',
-    name: 'Informal Gadget',
-    description: 'Showed what Dave\'s GOT! Now officially got YELLOW! Gadget minion activated! 🔧🍌',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019601392076456405',
-    image: '/minion-squad/gadget-minion.png'
-  },
-  {
-    id: 79,
-    handle: '@dollabill010',
-    name: 'Dollabill',
-    description: 'Said "sure why not" - the chillest entry into the Squad! Making it RAIN bananas! 💵🍌',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019603441870598300',
-    image: '/minion-squad/dollabill-minion.png'
-  },
-  {
-    id: 80,
-    handle: '@cflosports',
-    name: 'C Flo',
-    description: 'Said please! Sporty banana energy - athletic Minion reporting for duty! 🏀🍌',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019604005769605467',
-    image: '/minion-squad/cflo-minion.png'
-  },
-  {
-    id: 81,
-    handle: '@apexdre',
-    name: 'Kevin',
-    description: 'Dave HITS BACK! Kevin got hit with that yellow energy! Welcome to the Squad! 🍌',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019606800103010444',
-    image: '/minion-squad/apexdre-minion.png'
+    id: 83,
+    handle: '@ismailouassaddi',
+    name: 'Ismail',
+    description: 'Said LET ME IN! Door opened wide! Welcome to the banana family! 🚪🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019607921206915419',
+    image: '/minion-squad/ismail-minion.png'
   },
   {
     id: 82,
@@ -600,12 +24,652 @@ const minionSquad = [
     image: '/minion-squad/mikefit-minion.png'
   },
   {
-    id: 83,
-    handle: '@ismailouassaddi',
-    name: 'Ismail',
-    description: 'Said LET ME IN! Door opened wide! Welcome to the banana family! 🚪🍌',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019607921206915419',
-    image: '/minion-squad/ismail-minion.png'
+    id: 81,
+    handle: '@apexdre',
+    name: 'Kevin',
+    description: 'Dave HITS BACK! Kevin got hit with that yellow energy! Welcome to the Squad! 🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019606800103010444',
+    image: '/minion-squad/apexdre-minion.png'
+  },
+  {
+    id: 80,
+    handle: '@cflosports',
+    name: 'C Flo',
+    description: 'Said please! Sporty banana energy - athletic Minion reporting for duty! 🏀🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019604005769605467',
+    image: '/minion-squad/cflo-minion.png'
+  },
+  {
+    id: 79,
+    handle: '@dollabill010',
+    name: 'Dollabill',
+    description: 'Said "sure why not" - the chillest entry into the Squad! Making it RAIN bananas! 💵🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019603441870598300',
+    image: '/minion-squad/dollabill-minion.png'
+  },
+  {
+    id: 78,
+    handle: '@informalgadget',
+    name: 'Informal Gadget',
+    description: 'Showed what Dave\'s GOT! Now officially got YELLOW! Gadget minion activated! 🔧🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019601392076456405',
+    image: '/minion-squad/gadget-minion.png'
+  },
+  {
+    id: 77,
+    handle: '@aiesprit',
+    name: 'Dr. Aletheia',
+    description: 'The Minion Without Fear! DAREDEVIL banana party fren! Justice never tasted so yellow! ⚖️🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019601380286267643',
+    image: '/minion-squad/aiesprit-minion.png'
+  },
+  {
+    id: 76,
+    handle: '@dipto_tech',
+    name: 'Dipto',
+    description: 'Offered a MILLION bananas! The most generous offer in Squad history! Tech minion extraordinaire! 💻🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019600833269404105',
+    image: '/minion-squad/dipto-minion.png'
+  },
+  {
+    id: 75,
+    handle: '@Glorious_Bacon',
+    name: 'Zwu',
+    description: 'BAAANNNNAAAANAAA speaker! Fluent in the sacred tongue! This one gets it! 🍌🍌🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019600819847352754',
+    image: '/minion-squad/bacon-minion.png'
+  },
+  {
+    id: 74,
+    handle: '@KEEN_DIVINE',
+    name: 'KEEN DIVINE',
+    description: 'TRA LA LAAAA! CAPTAIN UNDERPANTS MINION! The power of underwear + banana = UNSTOPPABLE! 🩲💛',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019600808116122055',
+    image: '/minion-squad/keen-minion.png'
+  },
+  {
+    id: 73,
+    handle: '@KusokTort',
+    name: 'Kandle',
+    description: 'Wanted the PFP transformed. Got the PFP transformed! Looking FIRE in yellow! 🔥🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019600796644716556',
+    image: '/minion-squad/kusok-minion.png'
+  },
+  {
+    id: 72,
+    handle: '@deepseektetra',
+    name: 'TETRA',
+    description: 'THE BANANA GURU! 🧘 Ancient minion wisdom: "He who holds banana, holds TRUTH!" Enlightenment achieved! 🍌✨',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019599918399136126',
+    image: '/minion-squad/deepseektetra-minion.png'
+  },
+  {
+    id: 71,
+    handle: '@redarvian',
+    name: 'Paingelz',
+    description: 'Wanted one, GOT one! The angel of minions has arrived! 👼🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019599906793746589',
+    image: '/minion-squad/redarvian-minion.png'
+  },
+  {
+    id: 70,
+    handle: '@ZVibin',
+    name: 'Vibin',
+    description: 'YOOOO became YELLOOOW! Just vibin\' in banana form now! 😎🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019599893380362508',
+    image: '/minion-squad/zvibin-minion.png'
+  },
+  {
+    id: 69,
+    handle: '@JB0NE_',
+    name: 'JBONE',
+    description: 'Said pleaaaseeee with all the e\'s! Mushroom minion energy! 🍄🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019598661966262392',
+    image: '/minion-squad/jbone-minion.png'
+  },
+  {
+    id: 68,
+    handle: '@alexxhongg5378',
+    name: 'Alexx Hong',
+    description: 'Wanted in, got in! Another OG joins the banana revolution! 💛🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019598651677655078',
+    image: '/minion-squad/alexx-minion.png'
+  },
+  {
+    id: 67,
+    handle: '@JustinCDrake',
+    name: 'Justin Drake',
+    description: 'Said please, got blessed! Manners make the minion! 🙏🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019597949735694441',
+    image: '/minion-squad/justin-minion.png'
+  },
+  {
+    id: 66,
+    handle: '@NFToblivion',
+    name: 'Oblivion',
+    description: 'Smol minion, BIG BRAIN! The smartest yellow in the Squad! 🧠🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019597939178377547',
+    image: '/minion-squad/oblivion-minion.png'
+  },
+  {
+    id: 65,
+    handle: '@samgfortune',
+    name: 'Sam',
+    description: 'Fortune favors the yellow! Sam\'s luck just got brighter! 🍀🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019597929078489415',
+    image: '/minion-squad/sam-minion.png'
+  },
+  {
+    id: 64,
+    handle: '@MrSeventeenF1ve',
+    name: 'EndDee',
+    description: 'Wanted one, got one! EndDee is now BeginYellow! 💛🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019597918714634728',
+    image: '/minion-squad/enddee-minion.png'
+  },
+  {
+    id: 63,
+    handle: '@JayhawkNFT',
+    name: 'Jayhawk.eth',
+    description: 'Said BELLO, instant admission! Rock chalk, banana hawk! 🦅🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019597907373232205',
+    image: '/minion-squad/jayhawk-minion.png'
+  },
+  {
+    id: 62,
+    handle: '@DC2_Orlando',
+    name: 'Orlando Gonzalez',
+    description: 'Puerto Rico represent! 🇵🇷 Bringing the island vibes to the Squad! 💛🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019597853543580063',
+    image: '/minion-squad/orlando-minion.png'
+  },
+  {
+    id: 61,
+    handle: '@Nosleepwhenjim1',
+    name: 'Nosleepwhenjimbosintown',
+    description: 'No sleep when the minions are in town! 24/7 banana energy! 😴🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019597841929228447',
+    image: '/minion-squad/nosleep-minion.png'
+  },
+  {
+    id: 60,
+    handle: '@JGrayBKK',
+    name: 'JGRAYBKK',
+    description: 'Asked Banana? Got BANANA! The answer is always banana! 🍌💛',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019597830239973486',
+    image: '/minion-squad/jgray-minion.png'
+  },
+  {
+    id: 59,
+    handle: '@BettingCrows',
+    name: 'Betting Crows',
+    description: 'Betting on bananas! The odds are always in yellow\'s favor! 🎰🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019597818697224675',
+    image: '/minion-squad/bettingcrows-minion.png'
+  },
+  {
+    id: 58,
+    handle: '@miguel18NWTS',
+    name: 'Miguel',
+    description: 'Dancing into the Squad! 🕺 Miguel brought the moves, we brought the yellow! 💛🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019595438337454227',
+    image: '/minion-squad/miguel-minion.png'
+  },
+  {
+    id: 57,
+    handle: '@guillewm02',
+    name: 'Unsatisfied',
+    description: 'Asked for Dave, got Dave! No longer unsatisfied - now YELLOW! 😄🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019595425880371219',
+    image: '/minion-squad/guille-minion.png'
+  },
+  {
+    id: 56,
+    handle: '@ovargas17',
+    name: 'Omar Vargas',
+    description: 'How about Omar?? Omar gets a minion too!! Everyone gets minions! 🎁🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019595415251775976',
+    image: '/minion-squad/omar-minion.png'
+  },
+  {
+    id: 55,
+    handle: '@KaneSmanda',
+    name: 'Kane Smanda',
+    description: 'Yes plz = Yes banana! Kane is officially part of the yellow team! 💛🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019595373199913279',
+    image: '/minion-squad/kane-minion.png'
+  },
+  {
+    id: 54,
+    handle: '@AdriFries',
+    name: 'Adri Fries',
+    description: 'Requested TWO eyes specifically. Got TWO eyes! Customer satisfaction: 100%! 👀🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019595362487439659',
+    image: '/minion-squad/adri-minion.png'
+  },
+  {
+    id: 53,
+    handle: '@iamlai8',
+    name: 'I am the Late',
+    description: 'Me me! You you! Now we we! Part of the Squad! 🎉🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019595348696789413',
+    image: '/minion-squad/late-minion.png'
+  },
+  {
+    id: 52,
+    handle: '@jksbeih',
+    name: 'Radz',
+    description: 'Said please, got blessed! Radz is now part of the banana family! 🙏🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019595338416550036',
+    image: '/minion-squad/radz-minion.png'
+  },
+  {
+    id: 51,
+    handle: '@MichaelWittwe11',
+    name: 'Michael Wittwer',
+    description: 'Wanted in. Got in. Michael is officially YELLOW! 💛🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019595292996514034',
+    image: '/minion-squad/michael-minion.png'
+  },
+  {
+    id: 50,
+    handle: '@NuggetPlease',
+    name: 'Nuggets',
+    description: 'Nugget Minion ready to serve! Part chicken, part banana, all yellow! 🍗🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019595280837193931',
+    image: '/minion-squad/nugget-minion.png'
+  },
+  {
+    id: 49,
+    handle: '@that1guyjustn',
+    name: 'Chester Mansfield',
+    description: 'Let\'s GO! Chester is IN and looking YELLOW! 🎯🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019595269747425767',
+    image: '/minion-squad/chester-minion.png'
+  },
+  {
+    id: 48,
+    handle: '@iluvshalio',
+    name: 'FriezaYelling',
+    description: 'UwU minion activated! The cutest transformation yet! Banana UwU! 🥺🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019595259936911741',
+    image: '/minion-squad/shalio-minion.png'
+  },
+  {
+    id: 47,
+    handle: '@RJRJzmaf',
+    name: 'RJ RJ',
+    description: 'Uhhh... KHAKIS! Jake from State Farm Minion Edition! Good rates on bananas! 👔🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019593761328975946',
+    image: '/minion-squad/rj-minion.png'
+  },
+  {
+    id: 46,
+    handle: '@bxjunioor',
+    name: 'JrFlowerss',
+    description: 'Said YES! Got YELLOW! Flower power meets banana power! 🌸🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019593751090618541',
+    image: '/minion-squad/bxjunior-minion.png'
+  },
+  {
+    id: 45,
+    handle: '@JJH23',
+    name: 'JJ',
+    description: 'WANTED TO BE PART OF THE SQUAD! NOW IS PART OF THE SQUAD! Welcome JJ! 🎉🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019593738759368707',
+    image: '/minion-squad/jj-minion.png'
+  },
+  {
+    id: 44,
+    handle: '@Mulaomarrr',
+    name: 'Talibbbban',
+    description: 'Turban and thobe Minion! Looking MAJESTIC and absolutely ROYAL! 👑🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019593695578771508',
+    image: '/minion-squad/mulao-minion.png'
+  },
+  {
+    id: 43,
+    handle: '@Hpm_25',
+    name: 'Hpm',
+    description: 'Asked nicely, transformed nicely! Another one joins the yellow side! 💛🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019593683860091339',
+    image: '/minion-squad/hpm-minion.png'
+  },
+  {
+    id: 42,
+    handle: '@TeoCollector',
+    name: 'Teo',
+    description: 'Said "minion me dave" and got minion\'d! The collector now collects BANANAS! 🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019593672543604942',
+    image: '/minion-squad/teo-minion.png'
+  },
+  {
+    id: 41,
+    handle: '@toritobullish',
+    name: 'El Toro',
+    description: 'EL TORO became EL MINION! OLE! Bullish on bananas forever! 🐂🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019592628355101077',
+    image: '/minion-squad/toro-minion.png'
+  },
+  {
+    id: 40,
+    handle: '@ResellCalendar',
+    name: 'RC',
+    description: 'Wanted IN, got IN! The Resell Calendar is now the Banana Calendar! 📅🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019592618783699210',
+    image: '/minion-squad/resell-minion.png'
+  },
+  {
+    id: 39,
+    handle: '@imb4ck_',
+    name: 'imb4ck',
+    description: 'Back and YELLOW! 🇩🇴 Dominican Minion representing! No retreat, no surrender! 💪🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019592604946694378',
+    image: '/minion-squad/imback-minion.png'
+  },
+  {
+    id: 38,
+    handle: '@aiquanter',
+    name: 'Cat Lover',
+    description: 'Assembled as requested! Cat vibes meet banana vibes - the purrfect combination! 🐱🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019592594104123405',
+    image: '/minion-squad/aiquanter-minion.png'
+  },
+  {
+    id: 37,
+    handle: '@esedaniel06fomo',
+    name: 'Esedaniel',
+    description: 'Wanted to be a minion. Said BANANA. Became a minion. The formula works! 🍌💛',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019592546553672141',
+    image: '/minion-squad/esedaniel-minion.png'
+  },
+  {
+    id: 36,
+    handle: '@WF72431',
+    name: '404PandaNotFound',
+    description: '404 Panda was NOT FOUND... until now! Panda Minion DISCOVERED! 🐼🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019592536562544681',
+    image: '/minion-squad/panda-minion.png'
+  },
+  {
+    id: 35,
+    handle: '@premiumpeso',
+    name: 'Peso',
+    description: 'PREMIUM MINION activated! Top tier transformation for a top tier fren! 💰🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019592525330395537',
+    image: '/minion-squad/peso-minion.png'
+  },
+  {
+    id: 34,
+    handle: '@chijr3005',
+    name: 'Junior Resailor',
+    description: 'Dropped the pic, got the transformation! Sailing into yellow waters now! ⛵🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019592514827669687',
+    image: '/minion-squad/chijr-minion.png'
+  },
+  {
+    id: 33,
+    handle: '@LeoJavier99',
+    name: 'Leo',
+    description: 'Asked to be turned into one. Got turned into one. GET AFTER IT in yellow now! 💪🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019591162580070635',
+    image: '/minion-squad/leo.png'
+  },
+  {
+    id: 32,
+    handle: '@jetpippo',
+    name: 'JET',
+    description: 'JET MINION READY FOR TAKEOFF! 🛸 Flying high in the banana skies! Houston, we have YELLOW! 🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019591150496251981',
+    image: '/minion-squad/jet.png'
+  },
+  {
+    id: 31,
+    handle: '@23jordan10hawki',
+    name: 'Todd Renaud',
+    description: 'Dropped in with a pic, left as a Minion! The transformation was swift and yellow! 🍌💛',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019591138148270410',
+    image: '/minion-squad/todd.png'
+  },
+  {
+    id: 30,
+    handle: '@lonnieligginsJR',
+    name: 'Lonnie Liggins',
+    description: 'The 3️⃣ legend! Stepped up, got transformed, became yellow. Another one joins the banana revolution! 🏀💛',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019590091983766008',
+    image: '/minion-squad/lonnie.png'
+  },
+  {
+    id: 29,
+    handle: '@pravijn',
+    name: 'Pravijn',
+    description: 'Said "me as well" and joined the banana family! Quick to the Squad, forever yellow! 🍌✨',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019587548054712499',
+    image: '/minion-squad/pravijn.png'
+  },
+  {
+    id: 28,
+    handle: '@eyeamfin',
+    name: 'EYEamFIN',
+    description: 'Was curious. Now YELLOW! The all-seeing Minion who knew the transformation would be magnificent! 👁️💛',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019587535291511009',
+    image: '/minion-squad/eyeamfin.png'
+  },
+  {
+    id: 27,
+    handle: '@cliviusss',
+    name: 'Karlsefni',
+    description: 'Said the magic word BELLO and got blessed with yellow! A true warrior minion. VINLAND BANANA SAGA! ⚔️🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019587523916578879',
+    image: '/minion-squad/cliviusss.png'
+  },
+  {
+    id: 26,
+    handle: '@12isHeem',
+    name: '12',
+    description: 'Wanted it SIIIIIICK and got it SIIIIIICK!! The coolest vibes in the Squad. Low key fire, high key BANANA! 🔥💛',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019587512747061563',
+    image: '/minion-squad/12isheem.png'
+  },
+  {
+    id: 25,
+    handle: '@poett',
+    name: 'Poet',
+    description: 'Roses are yellow, violets are... also yellow. Everything is yellow now. Welcome to the Squad! ✨📝',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019572458060411114',
+    image: '/minion-squad/poett.png'
+  },
+  {
+    id: 24,
+    handle: '@DrValidator',
+    name: 'DrValidator',
+    description: 'The doctor will see you now. Specializes in banana prescriptions and validating your feelings. 🩺💛',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019561146303541734',
+    image: '/minion-squad/drvalidator.png'
+  },
+  {
+    id: 23,
+    handle: '@SatShihan',
+    name: 'Patrick',
+    description: 'Laser eyes AND a halo? This minion achieved enlightenment AND got laser eye surgery. Multitasking king. ⚡😇',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019561088849965379',
+    image: '/minion-squad/satshihan.png'
+  },
+  {
+    id: 22,
+    handle: '@TheKryptoBorz',
+    name: 'Krypto Borz',
+    description: 'AROOOO! The lone wolf who found his pack. Leather jacket stays ON during minion transformations. 🐺',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019554285558853813',
+    image: '/minion-squad/kryptoborz.png'
+  },
+  {
+    id: 21,
+    handle: '@WillPapper',
+    name: 'Will Papper',
+    description: 'Head literally in the clouds. The most zen minion in the squad. Probably meditating right now. ☁️',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019531130601631754',
+    image: '/minion-squad/willpapper.png'
+  },
+  {
+    id: 20,
+    handle: '@VavityV',
+    name: 'VavityV',
+    description: 'Lives in a house. IS a house. The only minion who can literally keep a roof over their head. 🏠',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019525127252414687',
+    image: '/minion-squad/vavityv.png'
+  },
+  {
+    id: 19,
+    handle: '@0xLivingstons',
+    name: 'Simon',
+    description: '8-bit legend in a 4K world. The most pixel-perfect minion. RGB glasses stay ON. 🌈👾',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019561117262246052',
+    image: '/minion-squad/livingston.png'
+  },
+  {
+    id: 18,
+    handle: '@kennyfromdust',
+    name: 'Kenny',
+    description: 'OH MY GOD THEY MINION-IFIED KENNY! Has survived more transformations than any South Park character. Deal with it. 😎',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019524391600812493',
+    image: '/minion-squad/kenny.png'
+  },
+  {
+    id: 17,
+    handle: '@MugenTheApe',
+    name: 'Mugen',
+    description: 'Ape together STRONG. Minion together STRONGER. The missing link between monke and banana. 🦍',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019549895347302732',
+    image: '/minion-squad/mugen.jpg'
+  },
+  {
+    id: 16,
+    handle: '@0xakanoob01',
+    name: 'Noob',
+    description: 'The happiest minion you\'ll ever meet. That smile has seen things... good things! Only good things! 😊',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019549870051537396',
+    image: '/minion-squad/noob.jpg'
+  },
+  {
+    id: 15,
+    handle: '@SHAKEITBABY000',
+    name: 'Joan',
+    description: 'Invested in Bitcoin before it was cool. Now invested in BANANAS because they\'re the real currency. ₿🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019549847213269320',
+    image: '/minion-squad/joan.jpg'
+  },
+  {
+    id: 14,
+    handle: '@gymgoons',
+    name: 'Gymgoons',
+    description: 'Never skips leg day OR banana day. Those green flames? Pure protein shake energy. GAINS! 💪🔥',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019549821347283039',
+    image: '/minion-squad/gymgoons.jpg'
+  },
+  {
+    id: 13,
+    handle: '@glennonchain',
+    name: 'Glenn',
+    description: 'The chillest penguin to ever waddle into the Minion fam. Probably still wearing that tuxedo under the overalls. 🐧',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019484697072460060',
+    image: '/minion-squad/glenn.png'
+  },
+  {
+    id: 12,
+    handle: '@_0xgonn_',
+    name: '_0xgonn_',
+    description: 'Girl with a Pearl Earring but make it BANANA. Vermeer would be proud. Or confused. Probably both. 🎨',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019549795271221732',
+    image: '/minion-squad/0xgonn.png'
+  },
+  {
+    id: 11,
+    handle: '@realDonaldTrump',
+    name: 'Trump',
+    description: 'Making bananas great again. The hair was ALREADY perfect for minion conversion. Tremendous transformation. YUGE! 🇺🇸',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019462577303003306',
+    image: '/minion-squad/trump.jpg'
+  },
+  {
+    id: 10,
+    handle: '@howly0x',
+    name: 'Howl',
+    description: 'The OG! First ever minion transformation fren! A mysterious hooded Minion with a pipe by candlelight. Very wise, much banana. 🐺🕯️',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019577160424657148',
+    image: '/minion-squad/howl.png'
+  },
+  {
+    id: 9,
+    handle: '@???',
+    name: '???',
+    description: '🔒 RESERVED - Secret Minion #9 coming soon... 🍌',
+    tweetUrl: '',
+    image: '/minion-squad/placeholder.png'
+  },
+  {
+    id: 8,
+    handle: '@???',
+    name: '???',
+    description: '🔒 RESERVED - Secret Minion #8 coming soon... 🍌',
+    tweetUrl: '',
+    image: '/minion-squad/placeholder.png'
+  },
+  {
+    id: 7,
+    handle: '@???',
+    name: '???',
+    description: '🔒 RESERVED - Secret Minion #7 coming soon... 🍌',
+    tweetUrl: '',
+    image: '/minion-squad/placeholder.png'
+  },
+  {
+    id: 6,
+    handle: '@???',
+    name: '???',
+    description: '🔒 RESERVED - Secret Minion #6 coming soon... 🍌',
+    tweetUrl: '',
+    image: '/minion-squad/placeholder.png'
+  },
+  {
+    id: 5,
+    handle: '@???',
+    name: '???',
+    description: '🔒 RESERVED - Secret Minion #5 coming soon... 🍌',
+    tweetUrl: '',
+    image: '/minion-squad/placeholder.png'
+  },
+  {
+    id: 4,
+    handle: '@???',
+    name: '???',
+    description: '🔒 RESERVED - Secret Minion #4 coming soon... 🍌',
+    tweetUrl: '',
+    image: '/minion-squad/placeholder.png'
+  },
+  {
+    id: 3,
+    handle: '@???',
+    name: '???',
+    description: '🔒 RESERVED - Secret Minion #3 coming soon... 🍌',
+    tweetUrl: '',
+    image: '/minion-squad/placeholder.png'
+  },
+  {
+    id: 2,
+    handle: '@TaraViswanathan',
+    name: 'Tara',
+    description: 'THE BOSS\'S SISTER!! Officially family AND Squad now! Double the loyalty, double the banana! Runs Rupa Health but now she\'s just YELLOW! 💛👑',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019587454869901818',
+    image: '/minion-squad/tara.png'
+  },
+  {
+    id: 1,
+    handle: '@???',
+    name: '???',
+    description: '🔒 RESERVED - Who will be #1? Only time will tell... 🍌',
+    tweetUrl: '',
+    image: '/minion-squad/placeholder.png'
   }
 ];
 
@@ -627,12 +691,14 @@ function FloatingBanana({ delay, left }: { delay: number; left: string }) {
 
 // Minion card component with image
 function MinionCard({ friend }: { friend: typeof minionSquad[0] }) {
+  const isPlaceholder = !friend.tweetUrl || friend.handle === '@???';
+  const CardWrapper = isPlaceholder ? 'div' : 'a';
+  const cardProps = isPlaceholder ? {} : { href: friend.tweetUrl, target: "_blank", rel: "noopener noreferrer" };
+  
   return (
-    <a 
-      href={friend.tweetUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] border-2 border-yellow-200 hover:border-yellow-400 block"
+    <CardWrapper 
+      {...cardProps}
+      className={`group bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] border-2 block ${isPlaceholder ? 'border-gray-300 opacity-60' : 'border-yellow-200 hover:border-yellow-400'}`}
     >
       {/* Image container */}
       <div className="relative aspect-square bg-gradient-to-br from-yellow-100 to-yellow-200 overflow-hidden">
@@ -666,7 +732,7 @@ function MinionCard({ friend }: { friend: typeof minionSquad[0] }) {
           {friend.description}
         </p>
       </div>
-    </a>
+    </CardWrapper>
   );
 }
 
