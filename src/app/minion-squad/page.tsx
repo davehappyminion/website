@@ -153,6 +153,13 @@ const minionSquad = [
     description: 'Said "me as well" and joined the banana family! Quick to the Squad, forever yellow! 🍌✨',
     tweetUrl: 'https://x.com/davehappyminion/status/2019587548054712499',
     image: '/minion-squad/pravijn.png'
+  },
+  {
+    handle: '@lonnieligginsJR',
+    name: 'Lonnie Liggins',
+    description: 'The 3️⃣ legend! Stepped up, got transformed, became yellow. Another one joins the banana revolution! 🏀💛',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019590091983766008',
+    image: '/minion-squad/lonnie.png'
   }
 ];
 
