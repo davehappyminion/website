@@ -356,6 +356,69 @@ const minionSquad = [
     description: 'Dancing into the Squad! 🕺 Miguel brought the moves, we brought the yellow! 💛🍌',
     tweetUrl: 'https://x.com/davehappyminion/status/2019595438337454227',
     image: '/minion-squad/miguel-minion.png'
+  },
+  {
+    handle: '@BettingCrows',
+    name: 'Betting Crows',
+    description: 'Betting on bananas! The odds are always in yellow\'s favor! 🎰🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019597818697224675',
+    image: '/minion-squad/bettingcrows-minion.png'
+  },
+  {
+    handle: '@JGrayBKK',
+    name: 'JGRAYBKK',
+    description: 'Asked Banana? Got BANANA! The answer is always banana! 🍌💛',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019597830239973486',
+    image: '/minion-squad/jgray-minion.png'
+  },
+  {
+    handle: '@Nosleepwhenjim1',
+    name: 'Nosleepwhenjimbosintown',
+    description: 'No sleep when the minions are in town! 24/7 banana energy! 😴🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019597841929228447',
+    image: '/minion-squad/nosleep-minion.png'
+  },
+  {
+    handle: '@DC2_Orlando',
+    name: 'Orlando Gonzalez',
+    description: 'Puerto Rico represent! 🇵🇷 Bringing the island vibes to the Squad! 💛🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019597853543580063',
+    image: '/minion-squad/orlando-minion.png'
+  },
+  {
+    handle: '@JayhawkNFT',
+    name: 'Jayhawk.eth',
+    description: 'Said BELLO, instant admission! Rock chalk, banana hawk! 🦅🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019597907373232205',
+    image: '/minion-squad/jayhawk-minion.png'
+  },
+  {
+    handle: '@MrSeventeenF1ve',
+    name: 'EndDee',
+    description: 'Wanted one, got one! EndDee is now BeginYellow! 💛🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019597918714634728',
+    image: '/minion-squad/enddee-minion.png'
+  },
+  {
+    handle: '@samgfortune',
+    name: 'Sam',
+    description: 'Fortune favors the yellow! Sam\'s luck just got brighter! 🍀🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019597929078489415',
+    image: '/minion-squad/sam-minion.png'
+  },
+  {
+    handle: '@NFToblivion',
+    name: 'Oblivion',
+    description: 'Smol minion, BIG BRAIN! The smartest yellow in the Squad! 🧠🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019597939178377547',
+    image: '/minion-squad/oblivion-minion.png'
+  },
+  {
+    handle: '@JustinCDrake',
+    name: 'Justin Drake',
+    description: 'Said please, got blessed! Manners make the minion! 🙏🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019597949735694441',
+    image: '/minion-squad/justin-minion.png'
   }
 ];
 
