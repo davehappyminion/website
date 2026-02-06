@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 // Note: metadata is in layout or needs to be in a separate file for client components
 
-// Minion Squad members with funny descriptions
+// Minion Squad members with funny descriptions - ordered by join date!
 const minionSquad = [
   {
     id: 2,
@@ -17,11 +17,11 @@ const minionSquad = [
   },
   {
     id: 10,
-    handle: '@howly0x',
-    name: 'Howl',
-    description: 'The OG! First ever minion transformation fren! A mysterious hooded Minion with a pipe by candlelight. Very wise, much banana. 🐺🕯️',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019577160424657148',
-    image: '/minion-squad/howl.png'
+    handle: '@realDonaldTrump',
+    name: 'Trump',
+    description: 'Making bananas great again. The hair was ALREADY perfect for minion conversion. Tremendous transformation. YUGE! 🇺🇸',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019462577303003306',
+    image: '/minion-squad/trump.jpg'
   },
   {
     id: 11,
@@ -33,19 +33,19 @@ const minionSquad = [
   },
   {
     id: 12,
-    handle: '@VavityV',
-    name: 'VavityV',
-    description: 'Lives in a house. IS a house. The only minion who can literally keep a roof over their head. 🏠',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019525127252414687',
-    image: '/minion-squad/vavityv.png'
-  },
-  {
-    id: 13,
     handle: '@kennyfromdust',
     name: 'Kenny',
     description: 'OH MY GOD THEY MINION-IFIED KENNY! Has survived more transformations than any South Park character. Deal with it. 😎',
     tweetUrl: 'https://x.com/davehappyminion/status/2019524391600812493',
     image: '/minion-squad/kenny.png'
+  },
+  {
+    id: 13,
+    handle: '@VavityV',
+    name: 'VavityV',
+    description: 'Lives in a house. IS a house. The only minion who can literally keep a roof over their head. 🏠',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019525127252414687',
+    image: '/minion-squad/vavityv.png'
   },
   {
     id: 14,
@@ -129,19 +129,19 @@ const minionSquad = [
   },
   {
     id: 24,
-    handle: '@realDonaldTrump',
-    name: 'Trump',
-    description: 'Making bananas great again. The hair was ALREADY perfect for minion conversion. Tremendous transformation. YUGE! 🇺🇸',
-    tweetUrl: 'https://x.com/davehappyminion/status/2019462577303003306',
-    image: '/minion-squad/trump.jpg'
-  },
-  {
-    id: 25,
     handle: '@poett',
     name: 'Poet',
     description: 'Roses are yellow, violets are... also yellow. Everything is yellow now. Welcome to the Squad! ✨📝',
     tweetUrl: 'https://x.com/davehappyminion/status/2019572458060411114',
     image: '/minion-squad/poett.png'
+  },
+  {
+    id: 25,
+    handle: '@howly0x',
+    name: 'Howl',
+    description: 'The OG! First ever minion transformation fren! A mysterious hooded Minion with a pipe by candlelight. Very wise, much banana. 🐺🕯️',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019577160424657148',
+    image: '/minion-squad/howl.png'
   },
   {
     id: 26,
