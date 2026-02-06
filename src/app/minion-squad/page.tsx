@@ -503,6 +503,13 @@ const minionSquad = [
     description: 'Said "sure why not" - the chillest entry into the Squad! Making it RAIN bananas! 💵🍌',
     tweetUrl: 'https://x.com/davehappyminion/status/2019603441870598300',
     image: '/minion-squad/dollabill-minion.png'
+  },
+  {
+    handle: '@cflosports',
+    name: 'C Flo',
+    description: 'Said please! Sporty banana energy - athletic Minion reporting for duty! 🏀🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019604005769605467',
+    image: '/minion-squad/cflo-minion.png'
   }
 ];
 
