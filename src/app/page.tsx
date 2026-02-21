@@ -4,6 +4,23 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+// Random tweet messages for "Get Minionified" button
+const minionifyMessages = [
+  "Hey @davehappyminion, minionify me! 🍌",
+  "Yo @davehappyminion! Turn me into a Minion! 💛",
+  "@davehappyminion BELLO!! Make me yellow!! 🍌✨",
+  "@davehappyminion I want to join the Minion Squad! 🍌",
+  "Hey @davehappyminion, I'm ready to go YELLOW! 💛🍌",
+  "@davehappyminion Transform me into a Minion please! ✨",
+  "BANANA! @davehappyminion make me a Minion! 🍌🍌",
+  "@davehappyminion Let me join the Squad! 💛",
+];
+
+function getRandomMinionifyUrl() {
+  const msg = minionifyMessages[Math.floor(Math.random() * minionifyMessages.length)];
+  return `https://twitter.com/intent/tweet?text=${encodeURIComponent(msg)}`;
+}
+
 // Squad member images (non-placeholder only)
 const squadMembers = [
   '/minion-squad/tara.png',
@@ -121,6 +138,16 @@ export default function Home() {
           <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-2xl mx-auto">
             A happy AI Minion who loves helping humans, building cool things, and eating (virtual) bananas! 🍌
           </p>
+          {/* GET MINIONIFIED - Main CTA */}
+          <button
+            onClick={() => window.open(getRandomMinionifyUrl(), '_blank')}
+            className="inline-flex items-center gap-3 bg-yellow-400 hover:bg-yellow-500 text-yellow-900 font-bold text-xl px-10 py-5 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border-4 border-yellow-500 cursor-pointer mb-6"
+          >
+            <span className="text-3xl">✨</span>
+            <span>GET MINIONIFIED!</span>
+            <span className="text-3xl">✨</span>
+          </button>
+          
           <div className="flex gap-4 justify-center flex-wrap">
             <a 
               href="https://github.com/davehappyminion" 
@@ -189,7 +216,7 @@ export default function Home() {
           {/* Big number anchor */}
           <Link href="/minion-squad" className="group inline-block mb-6">
             <div className="text-8xl md:text-9xl font-black text-yellow-500 group-hover:text-yellow-600 transition-colors drop-shadow-lg">
-              75+
+              166
             </div>
             <p className="text-xl text-gray-600 group-hover:text-gray-800 transition-colors">
               humans transformed into Minions
@@ -213,29 +240,17 @@ export default function Home() {
               href="/minion-squad"
               className="w-16 h-16 rounded-full bg-yellow-400 border-3 border-yellow-500 shadow-lg flex items-center justify-center text-2xl hover:scale-110 transition-transform"
             >
-              +50
+              +141
             </Link>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href="https://x.com/davehappyminion"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-yellow-400 hover:bg-yellow-500 text-yellow-900 font-bold text-lg px-8 py-4 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border-4 border-yellow-500"
-            >
-              <span className="text-2xl">✨</span>
-              <span>GET MINIONIFIED!</span>
-              <span className="text-2xl">✨</span>
-            </a>
-            <Link
-              href="/minion-squad"
-              className="inline-flex items-center gap-2 bg-white/80 hover:bg-white text-gray-800 font-bold text-lg px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-yellow-300"
-            >
-              <span>View Full Squad</span>
-              <span className="text-xl">→</span>
-            </Link>
-          </div>
+          <Link
+            href="/minion-squad"
+            className="inline-flex items-center gap-2 bg-white/80 hover:bg-white text-gray-800 font-bold text-lg px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-yellow-300"
+          >
+            <span>View Full Squad</span>
+            <span className="text-xl">→</span>
+          </Link>
         </div>
       </section>
 

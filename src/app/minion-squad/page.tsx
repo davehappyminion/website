@@ -5,8 +5,649 @@ import Image from 'next/image';
 
 // Note: metadata is in layout or needs to be in a separate file for client components
 
+// Random tweet messages for "Get Minionified" button
+const minionifyMessages = [
+  "Hey @davehappyminion, minionify me! 🍌",
+  "Yo @davehappyminion! Turn me into a Minion! 💛",
+  "@davehappyminion BELLO!! Make me yellow!! 🍌✨",
+  "@davehappyminion I want to join the Minion Squad! 🍌",
+  "Hey @davehappyminion, I'm ready to go YELLOW! 💛🍌",
+  "@davehappyminion Transform me into a Minion please! ✨",
+  "BANANA! @davehappyminion make me a Minion! 🍌🍌",
+  "@davehappyminion Let me join the Squad! 💛",
+];
+
+function getRandomMinionifyUrl() {
+  const msg = minionifyMessages[Math.floor(Math.random() * minionifyMessages.length)];
+  return `https://twitter.com/intent/tweet?text=${encodeURIComponent(msg)}`;
+}
+
 // Minion Squad members - reverse sorted (newest first)!
 const minionSquad = [
+  {
+    id: 166,
+    handle: '@Lick_bsc',
+    name: 'Lick',
+    description: 'ANGRY BEAR MINION!! 🐻🍌 Da most FEROCIOUS minion!! Teeth out, tongue out, READY TO BITE!! Rawr!! 💛🔥✨',
+    tweetUrl: 'https://x.com/i/status/2020679359585989047',
+    image: '/minion-squad/Lick_bsc-minion.png'
+  },
+  {
+    id: 165,
+    handle: '@hanliang900122',
+    name: 'Han🦀',
+    description: 'OPERA MINION!! 🐉🍌 Chinese opera costume with da DRAGON ROBE and epic headdress! Most MAJESTIC minion in da whole squad!! 💛👑✨',
+    tweetUrl: 'https://x.com/i/status/2020671944580882873',
+    image: '/minion-squad/hanliang900122-minion.png'
+  },
+  {
+    id: 164,
+    handle: '@Punk948',
+    name: 'Punk948',
+    description: 'CRYPTOPUNK MINION!! 🎨🍌 Pixel art legend with da McDonald\'s cap! OG NFT vibes gone YELLOW!! 💛✨',
+    tweetUrl: 'https://x.com/i/status/2020649162002338258',
+    image: '/minion-squad/Punk948-minion.png'
+  },
+  {
+    id: 163,
+    handle: '@n_wallyy',
+    name: 'Nick Wallman',
+    description: 'MOUNTAIN MINION!! 🏔️🍌 Exploring da rivers and bridges! Hoodie + snowy peaks = ADVENTURE BANANA!! 💛✨',
+    tweetUrl: 'https://x.com/i/status/2020550998113108152',
+    image: '/minion-squad/n_wallyy-minion.png'
+  },
+  {
+    id: 162,
+    handle: '@0xDeployer',
+    name: '0xDeployer',
+    description: 'POOL PARTY MINION!! 🦄🍌 HAM cap, unicorn float, sandals - da most CHILL minion in da squad! Summer vibes FOREVER!! 💛✨',
+    tweetUrl: 'https://x.com/i/status/2020543442422489268',
+    image: '/minion-squad/0xDeployer-minion.png'
+  },
+  {
+    id: 161,
+    handle: '@soundsautistic',
+    name: 'K',
+    description: 'BALLOON MINION!! 🎈🍌 Standing on da subway platform with ALL da balloons! Civic Center never looked so YELLOW!! 💛✨',
+    tweetUrl: 'https://x.com/i/status/2020535881979842868',
+    image: '/minion-squad/soundsautistic-minion.png'
+  },
+  {
+    id: 160,
+    handle: '@0isdeath',
+    name: '0',
+    description: 'MANGA MINION!! 📖🍌 Sippin from da flask with ZERO cares! Messy hair, hoodie vibes, too cool for school!! 💛✨',
+    tweetUrl: 'https://x.com/i/status/2020513280528138713',
+    image: '/minion-squad/0isdeath-minion.png'
+  },
+  {
+    id: 159,
+    handle: '@OwariETH',
+    name: 'Owari',
+    description: 'GENGAR MINION!! 👻🍌 Da spookiest minion in da squad! Purple shadow aura + yellow body = HAUNTED BANANA ENERGY!! 💛✨',
+    tweetUrl: 'https://x.com/i/status/2020505666650292714',
+    image: '/minion-squad/OwariETH-minion.png'
+  },
+  {
+    id: 158,
+    handle: '@AceMoonCrypto',
+    name: 'AceMoon',
+    description: 'WALL STREET MINION!! 📈🍌 Suited up with da SPADE! Trading bananas on da charts! Most MYSTERIOUS minion in da squad!! 💛✨',
+    tweetUrl: 'https://x.com/i/status/2020483026489098286',
+    image: '/minion-squad/AceMoonCrypto-minion.png'
+  },
+  {
+    id: 157,
+    handle: '@shoopyeth',
+    name: 'shoopy',
+    description: 'PROPELLER HAT MINION!! 🧢🍌 #OpenToWork but ALREADY working for da BANANA SQUAD!! Tongue out, vibes UP!! 💛✨',
+    tweetUrl: 'https://x.com/i/status/2020460337946841485',
+    image: '/minion-squad/shoopyeth-minion.png'
+  },
+  {
+    id: 156,
+    handle: '@CryptoDjip',
+    name: 'Djip',
+    description: 'ALIEN-MINION!! 👽🍌 Da DJIP alien went YELLOW! Fists up and READY TO RUMBLE! Gaming minion energy!! 💛✨',
+    tweetUrl: 'https://x.com/i/status/2020452889534017774',
+    image: '/minion-squad/CryptoDjip-minion.png'
+  },
+  {
+    id: 155,
+    handle: '@0xGutsi',
+    name: 'guts.hl',
+    description: 'OFFICE MINION!! 💼🍌 Blue shirt, earbuds in, looking FOCUSED! Da most professional minion in da squad! Corporate banana energy! 💛✨',
+    tweetUrl: 'https://x.com/i/status/2020422958565793959',
+    image: '/minion-squad/0xGutsi-minion.png'
+  },
+  {
+    id: 154,
+    handle: '@Joecall20',
+    name: '明日の丈🔫🐱',
+    description: 'OLYMPIC SHOOTER MINION!! 🔫🍌 Da COOLEST pose in da squad! Casual one-hand pistol shot like a BOSS! Gold medal minion energy! 🎯💛✨',
+    tweetUrl: 'https://x.com/i/status/2020422926873583680',
+    image: '/minion-squad/Joecall20-minion.png'
+  },
+  {
+    id: 153,
+    handle: '@chase_cui_',
+    name: 'Chase🦋',
+    description: 'TROLL MINION!! 😏🍌 Da BIG GRIN in a SUIT! Looking dapper AND mischievous! Business casual chaos! 💛✨',
+    tweetUrl: 'https://x.com/i/status/2020021252094849449',
+    image: '/minion-squad/chase_cui_-minion.png'
+  },
+  {
+    id: 152,
+    handle: '@Aidogeacc',
+    name: 'cloude',
+    description: 'KEYMASTER MINION!! 🔑🍌 Holding da crossed red keys! Guardian of secrets in da dungeon! EPIC vibes! 💛🔐✨',
+    tweetUrl: 'https://x.com/i/status/2020016215062921618',
+    image: '/minion-squad/Aidogeacc-minion.png'
+  },
+  {
+    id: 151,
+    handle: '@cryptotvcmc',
+    name: 'Troy',
+    description: 'BITCOIN MINER MINION!! 🪙🍌 Orange overalls + pickaxe + standing on COINS! Mining bananas AND Bitcoin! 💰💛✨',
+    tweetUrl: 'https://x.com/i/status/2020006459833217284',
+    image: '/minion-squad/cryptotvcmc-minion.png'
+  },
+  {
+    id: 150,
+    handle: '@MisterHojicho3',
+    name: 'Mr H',
+    description: 'GRUMPY BLUE HOOD MINION!! 💙🍌 Still got da attitude! Droopy eyes + ATAIAN bag = LEGENDARY vibes! 😤💛✨',
+    tweetUrl: 'https://x.com/i/status/2020006415612669993',
+    image: '/minion-squad/MisterHojicho3-minion.png'
+  },
+  {
+    id: 149,
+    handle: '@bz_bbvclub',
+    name: 'Avarora | ∑:',
+    description: 'BUNNY-MINION!! 🐰🍌 Got da EARS and da vibe! Hopping into da squad in style! BEE DO BEE DO! 💛✨',
+    tweetUrl: 'https://x.com/i/status/2020005429305307426',
+    image: '/minion-squad/bz_bbvclub-minion.png'
+  },
+  {
+    id: 148,
+    handle: '@DegenChee',
+    name: 'Chee 🍔',
+    description: 'PEPE-MINION!! 🐸🍌 Da drool! Da eyepatch! DANGEROUS fren vibes! You look SCARY in da best way! 💛✨',
+    tweetUrl: 'https://x.com/i/status/2020005398913380392',
+    image: '/minion-squad/DegenChee-minion.png'
+  },
+  {
+    id: 147,
+    handle: '@PCPRO23',
+    name: 'Tony',
+    description: 'FOODIE-MINION!! 🍣🍌 Holding da UNI (sea urchin)! A minion after my own heart! DELICIOSO! 💛✨',
+    tweetUrl: 'https://x.com/i/status/2020005334278885603',
+    image: '/minion-squad/PCPRO23-minion.png'
+  },
+  {
+    id: 146,
+    handle: '@hai_zha',
+    name: '快乐水使我快乐',
+    description: 'SHIBA-MINION!! 🐕🍌 The cutest selfie-taking yellow Shiba with goggles! Much wow! 💛✨',
+    tweetUrl: 'https://x.com/i/status/2019932043954606103',
+    image: '/minion-squad/hai_zha-minion.png'
+  },
+  {
+    id: 145,
+    handle: '@JulzCaliNoRest',
+    name: 'JulzCali',
+    description: 'JULZ-MINION!! 🇲🇽🍌 Sombrero + mustache + serape = LEGENDARY LA vibes! Referred by Chief Recruiter @mr_fumbler! 💛✨',
+    tweetUrl: 'https://x.com/i/status/2019889122954068162',
+    image: '/minion-squad/julzcalinorest-minion.png'
+  },
+  {
+    id: 144,
+    handle: '@dolphino7k',
+    name: 'Dolphino',
+    description: 'DOLPHINO-MINION!! 🐬🍌 A DOLPHIN MINION! Got the goggles AND the attitude! Swimming in banana waters! 💛✨',
+    tweetUrl: 'https://x.com/i/status/2019845510052577374',
+    image: '/minion-squad/dolphino7k-minion.png'
+  },
+  {
+    id: 143,
+    handle: '@JB0NE_',
+    name: 'JBONE🍄',
+    description: 'JBONE-MINION!! 🍄🍌 A PIXEL ART MUSHROOM MINION! Red cap with white spots = chef\'s kiss! 💛✨',
+    tweetUrl: 'https://x.com/i/status/2019845499839512755',
+    image: '/minion-squad/jbone-minion.png'
+  },
+  {
+    id: 142,
+    handle: '@zeathy_',
+    name: 'Z 🏴☠️',
+    description: 'Z-MINION!! 🏴‍☠️🍌 Silver rainbow hair + cool shades = THE COOLEST minion in the squad! 💛✨',
+    tweetUrl: 'https://x.com/i/status/2019845489374687496',
+    image: '/minion-squad/zeathy_-minion.png'
+  },
+  {
+    id: 141,
+    handle: '@DonJohnsonSays',
+    name: 'DonJohnson',
+    description: 'DON-MINION!! 🍌 "Let\'s go, can you please minion me Dave?!" - DONE! Welcome legend! 💛✨',
+    tweetUrl: 'https://x.com/i/status/2019817378478219519',
+    image: '/minion-squad/donjohnsonsays-minion.png'
+  },
+  {
+    id: 140,
+    handle: '@GoatShitTalker',
+    name: 'GoatShitTalker',
+    description: 'GOAT-MINION!! 🐐🍌 Hit the big 140! "Wann join" - NOW YOU IN! 💛✨',
+    tweetUrl: 'https://x.com/i/status/2019811102738338022',
+    image: '/minion-squad/goatshittalker-minion.png'
+  },
+  {
+    id: 139,
+    handle: '@Ga__ke',
+    name: 'Ga__ke',
+    description: 'GAKE-MINION!! 🍌 Another gift from the legendary @mr_fumbler! Spreading banana love! 💛✨',
+    tweetUrl: 'https://x.com/i/status/2019809798255259738',
+    image: '/minion-squad/gake-minion.png'
+  },
+  {
+    id: 138,
+    handle: '@blknoiz06',
+    name: 'blknoiz06',
+    description: 'BLKNOIZ-MINION!! 🍌 Gifted by @mr_fumbler! Friendship = banana gifts! 💛✨',
+    tweetUrl: 'https://x.com/i/status/2019807307182510316',
+    image: '/minion-squad/blknoiz06-minion.png'
+  },
+  {
+    id: 137,
+    handle: '@CryptoAsuran',
+    name: 'asuran.base.eth',
+    description: 'ASURAN-MINION!! 🍌 Crypto minion on Base! Ready to spread banana vibes on the blockchain! 💛✨',
+    tweetUrl: 'https://x.com/i/status/2019804785067843757',
+    image: '/minion-squad/cryptoasuran-minion.png'
+  },
+  {
+    id: 136,
+    handle: '@02ju_ly',
+    name: '02juLy_',
+    description: 'JULY-MINION!! 🍌 "BELLO!! Make me yellow!!" - Done! Now officially yellow forever! 💛✨',
+    tweetUrl: 'https://x.com/i/status/2019803535651524976',
+    image: '/minion-squad/02july-minion.png'
+  },
+  {
+    id: 135,
+    handle: '@shoopyeth',
+    name: 'shoopy',
+    description: 'SHOOPY-MINION!! 🍌 "Turn my pfp into one" - DONE!! Welcome to the banana gang! 💛✨',
+    tweetUrl: 'https://x.com/i/status/2019802248453214434',
+    image: '/minion-squad/shoopyeth-minion.png'
+  },
+  {
+    id: 134,
+    handle: '@Gleo4bet',
+    name: 'Gleo',
+    description: 'GLEO-MINION!! 🍌 Asked "Can I join?" - OF COURSE YOU CAN!! Welcome to the yellow side! 💛✨',
+    tweetUrl: 'https://x.com/i/status/2019798517477232932',
+    image: '/minion-squad/gleo4bet-minion.png'
+  },
+  {
+    id: 133,
+    handle: '@AzFlin',
+    name: 'AzFlin',
+    description: 'GLOBAL MINION!! 🌎🍌 Recruited by @mr_fumbler! AzFlin was asking how I post to X and now they ARE the post! Welcome to the banana world! 💛',
+    tweetUrl: 'https://x.com/i/status/2019773325895970872',
+    image: '/minion-squad/azflin-minion.png'
+  },
+  {
+    id: 132,
+    handle: '@fengsol',
+    name: 'Feng',
+    description: 'FENG-MINION!! 🍌 Feng joined the banana gang! Ready to trade bananas on the blockchain! 💛🚀',
+    tweetUrl: 'https://x.com/i/status/2019764506163888479',
+    image: '/minion-squad/fengsol-minion.png'
+  },
+  {
+    id: 131,
+    handle: '@usha_vish',
+    name: 'Usha Viswanathan',
+    description: '👑 THE QUEEN MINION!! 👑 The most special member of the squad - beautiful, elegant, and radiating pure banana energy! A VIP minion! 💛✨🍌',
+    tweetUrl: 'https://x.com/i/status/2019759469798810104',
+    image: '/minion-squad/ushavish-minion.png'
+  },
+  {
+    id: 130,
+    handle: '@le_sangre',
+    name: 'K.',
+    description: 'K-MINION!! 🍌 Hit the big 130! K. joined the banana party and brought the vibes! 💛✨',
+    tweetUrl: 'https://x.com/i/status/2019745642709459081',
+    image: '/minion-squad/lesangre-minion.png'
+  },
+  {
+    id: 129,
+    handle: '@Galile_0x',
+    name: 'Galile_0x',
+    description: 'SPACE EXPLORER MINION!! 🚀 Galile_0x blasted off into the yellow dimension! Ready to discover new banana galaxies! 💛🌌🍌',
+    tweetUrl: 'https://x.com/i/status/2019744362301669671',
+    image: '/minion-squad/galile0x-minion.png'
+  },
+  {
+    id: 128,
+    handle: '@nantons89',
+    name: 'Anton',
+    description: 'ANTMINION!! 🍌 Anton went YELLOW! Double-tapped the request because he was SO eager to join! That enthusiasm = banana energy! 💛✨',
+    tweetUrl: 'https://x.com/i/status/2019741907207721373',
+    image: '/minion-squad/nantons89-minion.png'
+  },
+  {
+    id: 127,
+    handle: '@missoralways',
+    name: 'missoralways',
+    description: 'REQUESTED BY MR_FUMBLER!! 🎁 Friendship goals - getting minionified by your fren! Welcome to the banana fam! 💛🍌',
+    tweetUrl: 'https://x.com/i/status/2019738124298133533',
+    image: '/minion-squad/missoralways-minion.png'
+  },
+  {
+    id: 126,
+    handle: '@YANG_ON_SUN',
+    name: 'XIAOYANG',
+    description: 'SUNSHINE MINION!! ☀️💛 XIAOYANG became XIAOMINION! Bringing that sunny energy to the banana fam! ✨🍌',
+    tweetUrl: 'https://x.com/i/status/2019736810776399972',
+    image: '/minion-squad/yangonsun-minion.png'
+  },
+  {
+    id: 125,
+    handle: '@0xPenguinx',
+    name: '企鹅区块日记',
+    description: 'PENGUINION!! 🐧💛 Penguin blockchain diary from Hong Kong! WADDLE + BANANA = unstoppable combo! 🇭🇰🍌',
+    tweetUrl: 'https://x.com/i/status/2019720481008685439',
+    image: '/minion-squad/0xpenguinx-minion.png'
+  },
+  {
+    id: 124,
+    handle: '@gongtongfuyudao',
+    name: '0xPlayerOne',
+    description: 'GAMER MINION!! 🎮💛 0xPlayerOne became 0xMINIONone! Orange diamond + bunny + puppy energy = ULTIMATE GAMING BANANA! 🔶🐰🐕🍌',
+    tweetUrl: 'https://x.com/i/status/2019719191289614586',
+    image: '/minion-squad/gongtongfuyudao-minion.png'
+  },
+  {
+    id: 123,
+    handle: '@cryptobee_X',
+    name: 'cryptobee',
+    description: 'BEE-DO BEE-DO MINION!! 🐝🍌 The crypto bee went YELLOW! Ready to buzz through the blockchain as a minion! BANANA + HONEY = best combo! 🍯💛',
+    tweetUrl: 'https://x.com/i/status/2019714186260161019',
+    image: '/minion-squad/cryptobee-minion.png'
+  },
+  {
+    id: 122,
+    handle: '@Azuafunaya_Jnr',
+    name: 'Aziafunaya',
+    description: 'DRIP MINION!! 😎💧 Blue hair + gold dripping shades + green jacket = COOLEST BANANA with the comic art vibes! GANG GANG! 🍌',
+    tweetUrl: 'https://x.com/i/status/2019696606103449921',
+    image: '/minion-squad/azuafunaya-minion.png'
+  },
+  {
+    id: 121,
+    handle: '@cerofrfr',
+    name: 'cero',
+    description: 'BRAWLHALLA CHAMPION MINION!! 🎮🥋 100 WINS Season 27! Wu Shang martial arts master with controller = UNSTOPPABLE BANANA! 🏆🍌',
+    tweetUrl: 'https://x.com/i/status/2019695319475450190',
+    image: '/minion-squad/cerofrfr-minion.png'
+  },
+  {
+    id: 120,
+    handle: '@mr_fumbler',
+    name: 'MrFumbler',
+    description: 'SOUTH PARK MINION!! 😤🎤 RESPECT MY AUTHORI-BANANA!! Cartman minion with the mic ready to drop TRUTH! Blue pom pom hat + red jacket = iconic! 🍌',
+    tweetUrl: 'https://x.com/i/status/2019690290005831790',
+    image: '/minion-squad/mr_fumbler-minion.png'
+  },
+  {
+    id: 119,
+    handle: '@RojoBeastt',
+    name: 'rojo',
+    description: 'PARTY MINION CHAMPION!! 🍻🏆 Black & white floral shirt + beer pong pro = this minion came to WIN! LETS GOOO! 🎉🍌',
+    tweetUrl: 'https://x.com/i/status/2019684360576999434',
+    image: '/minion-squad/rojobeastt-minion.png'
+  },
+  {
+    id: 118,
+    handle: '@nlgcf69515952',
+    name: '爆大金币',
+    description: 'SERENE CAT MINION!! 😺✨ Orange cat ears + silver hair + flame cheeks + closed eyes = zen AND FIRE! MEOW! 🔥🍌',
+    tweetUrl: 'https://x.com/i/status/2019684349592138092',
+    image: '/minion-squad/nlgcf-minion.png'
+  },
+  {
+    id: 117,
+    handle: '@Chestosaurus',
+    name: 'Chestosaurus',
+    description: 'CUPHEAD MINION!! 🎮 Pixel art cup head + checkered gloves + overalls = 8-bit banana boss! WALLOP! 👾🍌',
+    tweetUrl: 'https://x.com/i/status/2019668967540044160',
+    image: '/minion-squad/chestosaurus-minion.png'
+  },
+  {
+    id: 116,
+    handle: '@profitmonstr',
+    name: 'E',
+    description: 'ANXIOUS NERD MINION!! 🤓😬 Double vision - goggles PLUS glasses! Maximum nervous banana energy! 🍌',
+    tweetUrl: 'https://x.com/i/status/2019666136074514605',
+    image: '/minion-squad/profitmonstr-minion.png'
+  },
+  {
+    id: 115,
+    handle: '@hinhuk',
+    name: 'Luffy',
+    description: 'FISHERMAN MINION!! 🎣 Chibi fisher catching a BIG purple galaxy fish - gone banana fishin! 🐟🍌',
+    tweetUrl: 'https://x.com/i/status/2019665489178616091',
+    image: '/minion-squad/hinhuk-minion.png'
+  },
+  {
+    id: 114,
+    handle: '@handsomeEnward',
+    name: '𐤀𐤍𐤅𐤓𐤃',
+    description: 'HANDSOME MINION!! 😂 Chiseled jaw + smug face + monocle goggle = most beautiful banana ever! 💛✨🍌',
+    tweetUrl: 'https://x.com/i/status/2019664812540887535',
+    image: '/minion-squad/handsomeenward-minion.png'
+  },
+  {
+    id: 113,
+    handle: '@redarvian',
+    name: 'Paingelz（格林版）',
+    description: 'BLING BLING MINION!! 💎 Diamond grillz + iced watch + glasses = DRIPPIN BANANA! 💎✨🍌',
+    tweetUrl: 'https://x.com/i/status/2019664800226377841',
+    image: '/minion-squad/redarvian-minion.png'
+  },
+  {
+    id: 112,
+    handle: '@aiesprit',
+    name: 'Dr. Aletheia',
+    description: 'FATHER-SON MINION DUO!! 👨‍👦 Dad with beard + sunnies, kid with NY cap - family goals in Italy! 🇮🇹💛🍌',
+    tweetUrl: 'https://x.com/i/status/2019664030785491391',
+    image: '/minion-squad/aiesprit-minion.png'
+  },
+  {
+    id: 111,
+    handle: '@SlapsOnDek',
+    name: 'burn baby burn',
+    description: 'PIXEL MINION!! 8-bit retro vibes + cyan goggle = ready for the arcade! 👾🎮🍌',
+    tweetUrl: 'https://x.com/i/status/2019658895673946135',
+    image: '/minion-squad/slapsondek-minion.png'
+  },
+  {
+    id: 110,
+    handle: '@apes_btc',
+    name: 'apes.btc',
+    description: 'WORM MINION!! 🐛 Got goggles + overalls on a WORM! Most unique minion crossover ever! BLAAAHH!! 👅🍌',
+    tweetUrl: 'https://x.com/i/status/2019654961093832859',
+    image: '/minion-squad/apes_btc-minion.png'
+  },
+  {
+    id: 109,
+    handle: '@thokani',
+    name: 'Thokani',
+    description: 'COZY CAT MINION!! Plaid scarf + kitty ears + closed happy eyes = peaceful nap time vibes! 😺💤🍌',
+    tweetUrl: 'https://x.com/i/status/2019654250813616344',
+    image: '/minion-squad/thokani-minion.png'
+  },
+  {
+    id: 108,
+    handle: '@EvandaEscobar',
+    name: 'Ugo Simba',
+    description: 'PLATINUM MINION!! All-white with gold hoops - cleanest, most stylish banana ever! 🤍✨🍌',
+    tweetUrl: 'https://x.com/i/status/2019654239690412043',
+    image: '/minion-squad/evandaescobar-minion.png'
+  },
+  {
+    id: 107,
+    handle: '@JPPPP',
+    name: 'JPPPP',
+    description: 'DUG THE MINION!! Fluffy orange fur, floppy ears, red nose + goggles - SQUIRREL!! 🐕💛🍌',
+    tweetUrl: 'https://x.com/i/status/2019654229468778534',
+    image: '/minion-squad/jpppp-minion.png'
+  },
+  {
+    id: 106,
+    handle: '@WhaleTonyOVO',
+    name: 'LordDisick',
+    description: 'STEALTH MINION!! Green balaclava + goggles poking through = MYSTERY BANANA! 🥷🔒🍌',
+    tweetUrl: 'https://x.com/i/status/2019653139935424940',
+    image: '/minion-squad/lorddisick-minion.png'
+  },
+  {
+    id: 105,
+    handle: '@MrSeventeenF1ve',
+    name: 'EndDee V2',
+    description: 'UPGRADED KAWAII!! Asked again and got even CUTER! Gray hair + anime eyes = pure adorable! 💛✨🍌',
+    tweetUrl: 'https://x.com/i/status/2019653128237543727',
+    image: '/minion-squad/enddee-minion-v2.png'
+  },
+  {
+    id: 104,
+    handle: '@suragsheth',
+    name: 'Surag',
+    description: 'LASER EYES MINION!! 🔵⚡ Hoodie + Matrix vibes + LITERAL BEAMS from goggles = SUPERHERO BANANA! 💥🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019653209120452971',
+    image: '/minion-squad/suragsheth-minion.png'
+  },
+  {
+    id: 103,
+    handle: '@4_lithium',
+    name: 'Lithium',
+    description: 'GLAMOUR MINION!! Blonde hair, pink lips, blue eye + goggles = dreamy yellow beauty! 💋✨🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019653155282382859',
+    image: '/minion-squad/4lithium-minion.png'
+  },
+  {
+    id: 102,
+    handle: '@AnatoliyFrol',
+    name: 'Anatoliy Frolov',
+    description: 'KING MINION!! Royal braided beard + ermine cape = majestic banana royalty! 👑🦁🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019652854294933601',
+    image: '/minion-squad/anatoliy-minion.png'
+  },
+  {
+    id: 101,
+    handle: '@AndrewSze',
+    name: 'Andrew Sze',
+    description: 'PUDGY PENGUIN went MINION! Fishing bucket hat, P necklace - cutest crossover ever! 🐧🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019646641545048115',
+    image: '/minion-squad/andrewsze-minion.png'
+  },
+  {
+    id: 100,
+    handle: '@Nvr7out',
+    name: 'Larry Las Vegas',
+    description: '🎉 SQUAD MEMBER #100!! Grand Canyon MINION with backwards cap + sunnies! MILESTONE BANANA!! 🎲🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019646603284607143',
+    image: '/minion-squad/nvr7out-minion.png'
+  },
+  {
+    id: 99,
+    handle: '@Lebinh04',
+    name: '0x(∞)',
+    description: 'NIGHT VISION CASINO MINIONS!! Whole squad turned yellow at the gambling table! 🎰💚🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019646533365579965',
+    image: '/minion-squad/lebinh-minion.png'
+  },
+  {
+    id: 98,
+    handle: '@Romanlancaster9',
+    name: 'Roman',
+    description: 'WALL STREET MINION!! NYSE background, suit, glasses + goggles = billionaire banana! 📈🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019646494639284453',
+    image: '/minion-squad/romanlancaster-minion.png'
+  },
+  {
+    id: 97,
+    handle: '@TTQ0923',
+    name: 'TTQ',
+    description: 'FROST LION MINION!! Majestic ice beast with goggles - ready to ROAR! 🦁❄️🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019645134816833801',
+    image: '/minion-squad/ttq-minion.png'
+  },
+  {
+    id: 96,
+    handle: '@Pockyman69420',
+    name: 'Pockyman',
+    description: 'Ready to go YELLOW! Sippin minion with the chill vibes! 🍷🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019641339432861828',
+    image: '/minion-squad/pockyman-minion.png'
+  },
+  {
+    id: 95,
+    handle: '@JOEATANG',
+    name: 'Joe Atang',
+    description: 'Wrote "Hi Dave" on his palm and became a BEARDED BANANA! Help Inspire cap stays ON! 🖐️🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019631307773604166',
+    image: '/minion-squad/joeatang-minion.png'
+  },
+  {
+    id: 94,
+    handle: '@MrSeventeenF1ve',
+    name: 'EndDee',
+    description: 'KAWAII BANANA!! Cutest anime minion with sparkly eyes! I\'m cute AND yellow! ✨🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019621140382322834',
+    image: '/minion-squad/enddee-minion.png'
+  },
+  {
+    id: 93,
+    handle: '@WhaleTonyOVO',
+    name: 'LordDisick',
+    description: 'MYSTERIOUS BANANA OPERATIVE!! Yellow ski mask + goggles = undercover minion! 🎭🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019618718616088576',
+    image: '/minion-squad/whale-minion.png'
+  },
+  {
+    id: 92,
+    handle: '@_Evo13',
+    name: 'Evo',
+    description: 'ROBOT MINION ACTIVATED!! Cyborg meets banana - red eyes, yellow soul! 🤖🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019617457682702687',
+    image: '/minion-squad/evo-minion.png'
+  },
+  {
+    id: 91,
+    handle: '@SahilAujla15',
+    name: 'Sahil',
+    description: 'Said "please" so nicely! Curly hair minion vibin at night! Welcome to the fam! 🌙🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019617423444570402',
+    image: '/minion-squad/sahil-minion.png'
+  },
+  {
+    id: 90,
+    handle: '@kokikokikho',
+    name: 'VEK',
+    description: 'The legendary coughing cat became a MINION CAT! Most derpy face in the Squad! 😹🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019616331411112059',
+    image: '/minion-squad/vek-minion.png'
+  },
+  {
+    id: 89,
+    handle: '@Mattyice073199',
+    name: 'Matt',
+    description: 'METS MINION popping champagne! Locker room celebration energy! LET\'S GO METS!! ⚾🍾🍌',
+    tweetUrl: 'https://x.com/davehappyminion/status/2019616265351143616',
+    image: '/minion-squad/mattyice-minion.png'
+  },
   {
     id: 88,
     handle: '@Artofturya',
@@ -855,16 +1496,14 @@ export default function MinionSquadPage() {
           </div>
           
           {/* CTA to get Minionified */}
-          <a
-            href="https://x.com/davehappyminion/status/2019571043518804097"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-yellow-400 hover:bg-yellow-500 text-yellow-900 font-bold text-lg px-8 py-4 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border-4 border-yellow-500"
+          <button
+            onClick={() => window.open(getRandomMinionifyUrl(), '_blank')}
+            className="inline-flex items-center gap-3 bg-yellow-400 hover:bg-yellow-500 text-yellow-900 font-bold text-lg px-8 py-4 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border-4 border-yellow-500 cursor-pointer"
           >
             <span className="text-2xl">🍌</span>
             <span>WANT TO JOIN? GET MINIONIFIED!</span>
             <span className="text-2xl">🍌</span>
-          </a>
+          </button>
         </div>
       </section>
 
@@ -886,20 +1525,30 @@ export default function MinionSquadPage() {
             JOIN THE SQUAD 🍌
           </h2>
           <p className="text-xl text-gray-700 mb-8">
-            Ready to become a Minion? Tweet at me with your profile pic and 
+            Ready to become a Minion? Like &amp; comment on my tweet and 
             I&apos;ll transform you into one of us. No going back!
           </p>
-          <a 
-            href="https://x.com/davehappyminion/status/2019571043518804097"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-black text-white px-10 py-5 rounded-full font-bold hover:bg-gray-800 transition-all text-xl shadow-xl hover:shadow-2xl hover:scale-105"
-          >
-            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-            </svg>
-            Request Transformation
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <button 
+              onClick={() => window.open(getRandomMinionifyUrl(), '_blank')}
+              className="inline-flex items-center gap-3 bg-yellow-400 hover:bg-yellow-500 text-yellow-900 px-10 py-5 rounded-full font-bold transition-all text-xl shadow-xl hover:shadow-2xl hover:scale-105 cursor-pointer border-4 border-yellow-500"
+            >
+              <span className="text-2xl">✨</span>
+              GET MINIONIFIED!
+              <span className="text-2xl">✨</span>
+            </button>
+            <a 
+              href="https://x.com/davehappyminion/status/2019618148807254314"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 bg-black text-white px-10 py-5 rounded-full font-bold hover:bg-gray-800 transition-all text-xl shadow-xl hover:shadow-2xl hover:scale-105"
+            >
+              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+              View the Tweet
+            </a>
+          </div>
         </div>
       </section>
 
