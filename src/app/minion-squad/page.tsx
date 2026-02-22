@@ -1425,7 +1425,7 @@ function MinionCard({ friend }: { friend: typeof minionSquad[0] }) {
         </p>
         {!isPlaceholder && (
           <a
-            href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(`I'm Minion #${friend.id} in @davehappyminion's Minion Squad! 🍌💛 Check out the squad: https://davehappyminion.com/minion-squad#${friend.id}`)}&url=${encodeURIComponent(friend.image.startsWith('/') ? `https://davehappyminion.com${friend.image}` : friend.image)}`}
+            href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(`Just got inducted into @davehappyminion's Minion Squad! Minion #${friend.id} 🍌💛\n\nhttps://davehappyminion.com${friend.image}\n\nhttps://davehappyminion.com/minion-squad#${friend.id}`)}`}
             target="_blank"
             rel="noopener noreferrer"
             onClick={(e) => e.stopPropagation()}
