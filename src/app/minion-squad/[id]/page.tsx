@@ -1,6 +1,6 @@
-import { redirect } from 'next/navigation';
 import type { Metadata } from 'next';
 import membersData from '../members_ordered.json';
+import RedirectClient from './redirect-client';
 
 type Props = {
   params: Promise<{ id: string }>;
@@ -40,5 +40,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function MinionMemberPage({ params }: Props) {
   const { id } = await params;
-  redirect(`/minion-squad#${id}`);
+  const member = membersData.find((m) => m.id.toString() === id);
+  
+  return (
+    <div className="min-h-screen bg-yellow-300 flex items-center justify-center">
+      <div className="text-center">
+        <p className="text-2xl">🍌 Redirecting to Minion #{id}...</p>
+      </div>
+      <RedirectClient id={id} />
+    </div>
+  );
 }
