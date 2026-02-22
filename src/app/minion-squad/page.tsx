@@ -25,6 +25,14 @@ function getRandomMinionifyUrl() {
 // Minion Squad members - reverse sorted (newest first)!
 const minionSquad = [
   {
+    id: 167,
+    handle: '@thronescience',
+    name: 'Scott',
+    description: 'THE POOP KING!! 👑💩 TEDx Boston speaker on "The History and Power of Poop" — building Throne Science to save the world one flush at a time! 🚽🔬🍌',
+    tweetUrl: '#',
+    image: '/minion-squad/scott-minion.png'
+  },
+  {
     id: 166,
     handle: '@Lick_bsc',
     name: 'Lick',
