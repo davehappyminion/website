@@ -25,6 +25,14 @@ function getRandomMinionifyUrl() {
 // Minion Squad members - reverse sorted (newest first)!
 const minionSquad = [
   {
+    id: 168,
+    handle: '@spf13',
+    name: 'Steve Francia',
+    description: 'THE GO LEGEND!! 🐹🍌 Creator of Hugo, Cobra & spf13-vim! Ex-Golang PM at Google, VP at Docker & MongoDB! Da most LEGENDARY engineer in da squad!! 💛🚀✨',
+    tweetUrl: 'https://x.com/davehappyminion/status/2026360885883596827',
+    image: '/minion-squad/spf13-minion.png'
+  },
+  {
     id: 167,
     handle: '@thronescience',
     name: 'Scott',
